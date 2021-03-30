@@ -202,9 +202,9 @@
   <div class="col-sm-5" style="display: flex; justify-content: flex-end;">
 
     <!-- <button  >Connect to Wallet</button> -->
-    <div style="margin-right: 250px;" *ngIf="isLogin">
+    <div style="margin-right: 350px;" *ngIf="isLogin">
 
-      <div mat-button [matMenuTriggerFor]="menu" class="w3-button w3-round-xlarge Connect-wallet accNO">
+      <div mat-button [matMenuTriggerFor]="beforeMenu" class="w3-button w3-round-xlarge Connect-wallet accNO">
         <a class="hello" mat-button style="padding-left: 0;" (click)="refetchBalance()">
           <span style="width:100%">{{accountNo | formattedAccountNo}}</span>
         </a>
@@ -214,19 +214,19 @@
       </div>
 
 
-      <mat-menu #menu="matMenu" style="width: 100%">
+      <mat-menu  #beforeMenu="matMenu"  xPosition="before" style="width: 100%">
         <div style="display: flex; margin-right: 20px;">
           <div style="width: 49%; display: flex;margin-right: 20px;">
             <i class="fab fa-ethereum" style="font-size: 30px;margin-left: 20%;margin-top: 10%"></i>
             <span class="truncate" style="margin-top: 16%;margin-left: 10%;">
-              {{totalBalance | number:'1.0-5'}}
+              {{totalBalance | number:'0.0-2'}}
             </span>
           </div>
           <div style="width: 2%; font-size: 30px;margin-top:6%"> | </div>
           <div style="width: 49%; display: flex;margin-right: 20px;">
             <!-- <i class="fab fa-ethereum" style="font-size: 30px;margin-left: 20%;margin-top: 10%"></i> -->
             <img src="../assets/logo-white.png" alt="logo" style="height: 30px;width: 30px; margin-left: 10%;margin-top: 10%">
-            <span style="margin-top: 16%;margin-left: 10%">
+            <span  class="truncate"  style="margin-top: 16%;margin-left: 10%">
               {{griseBalance | number:'0.0-2'}}
             </span>
           </div>
@@ -248,7 +248,7 @@
       </mat-menu>
 
     </div>
-    <div  *ngIf="!isLogin">      
+    <div  style="margin-right: 85px;" *ngIf="!isLogin">      
         <button mat-button (click)="connectToWallet()"
           class="w3-button w3-round-xlarge Connect-wallet without-accno ">Connect to Wallet</button>      
     </div>

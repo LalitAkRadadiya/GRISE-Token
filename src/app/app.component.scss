@@ -19,7 +19,12 @@
   background-color: #f1f1f1;
   padding: 0px;
 }
-
+.truncate{
+  width: 100%;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
 ::-webkit-scrollbar {
   width: 0px;
 }
@@ -263,13 +268,15 @@
   background-image: linear-gradient(135deg, #667eea, #764ba2) !important;
   position: absolute;
   display: flex;
-  width: 235px;
+  width: 265px;
   align-items: center;
   // width: 40%;
 }
-
+.hello{
+  width: 235px;
+}
 .without-accno {
-  width: 100%;
+  width: 265px;
   border-radius: 18px;
   padding: 0px 35px;
 }

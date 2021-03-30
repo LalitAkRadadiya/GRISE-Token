@@ -22,13 +22,20 @@ button {
   box-shadow: 8px 0 24px rgb(0 0 0 / 16%), 4px 0 16px rgb(0 0 0 / 8%);
   position: fixed;
   z-index: 99;
+  
+  background-color: rgb(59, 65, 72);
 }
 
 .tokenstats_second {
   padding-left: 34%;
   min-height: 800px;
+  
+  
+  background-color: rgb(59, 65, 72);
 }
-
+.bg-color{
+  min-height: 125%;
+}
 .staking {
   margin-top: 25%;
 }

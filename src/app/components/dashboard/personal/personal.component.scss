@@ -176,10 +176,5 @@ label {
   padding-left: 16px;
 }
 .trancate{
-  white-space: nowrap; 
-  width: 50px; 
-  overflow: hidden;
-  text-overflow: ellipsis; 
-  border: 1px solid #000000;
-   
+  word-break: break-word;
 }

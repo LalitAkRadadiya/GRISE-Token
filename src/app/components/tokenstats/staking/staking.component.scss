@@ -59,10 +59,15 @@ button{
 }
 .table_wid{
   width:100%;
-  min-width: 392px;;
+  min-width: 375px;;
 }
 .first_table, .first_graph, .second_table , .second_graph{
-
+@media (max-width:420px) {
+  zoom: 0.9;
+}
   width: 100%;
 }
+}
+.sub-end-part {
+  padding-top: 60px;
 }
