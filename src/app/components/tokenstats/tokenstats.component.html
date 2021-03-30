@@ -1,0 +1,24 @@
+<div class="container-fluid bg-color">
+
+  <div class="row content">
+      
+      <div class="col-lg-3 tokenstats_first" >
+              
+               
+          <div style="display: grid">
+          <div class="">
+            <button type="button" routerLink="staking" queryParamsHandling="merge" class="btn btn-primary staking" >Staking</button>
+          </div>
+          <div class="">
+            <button type="button" routerLink="graph" queryParamsHandling="merge" class="btn btn-primary">Graph</button>
+          </div>
+          
+        </div>
+
+      </div>
+      
+      <div class="col-lg-12 tokenstats_second">
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>

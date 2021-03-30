@@ -1,0 +1,27 @@
+.dialog-container {
+  background-color: rgb(70, 73, 79);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.mat-dialog-actions {
+  justify-content: center;
+}
+
+.tab-button {
+  background: linear-gradient(89.02deg, #6226D9 0.89%, #8C52FF 100%) !important;
+  border-radius: 10px;
+  min-width: 100px;
+  margin: 12px;
+}
+
+table {
+  margin-right: auto;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+  font-size: 16px;
+}

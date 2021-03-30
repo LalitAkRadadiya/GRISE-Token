@@ -1,0 +1,2151 @@
+{
+  "contractName": "usingNRE",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/Dhaval/eth/grise/src/contracts/nreAPI.sol\":\"usingNRE\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Dhaval/eth/grise/src/contracts/nreAPI.sol\":{\"keccak256\":\"0xf5d7590a4fd958ad1b1cc6bdb5c85b69e98ea2d7eb13d5d926e927be84c11756\",\"license\":\"--\",\"urls\":[\"bzz-raw://82e03109ba418c8d5296dcdb3f6fe34e5dfc39bd38e4d21eda9720320f99768f\",\"dweb:/ipfs/QmdWv5Ww16AfrgBHugkAofyb8z6mkFPNgScNBaGHY3Vojp\"]}},\"version\":1}",
+  "bytecode": "0x608060405273031eae8a8105217ab64359d4361022d0947f45726000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550348015606357600080fd5b50603f8060716000396000f3fe6080604052600080fdfea26469706673582212203db8f1cb909416e18f5c9ffe2cd866fce3d4a48d894ebbd641b7218ee15fe52564736f6c63430007060033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212203db8f1cb909416e18f5c9ffe2cd866fce3d4a48d894ebbd641b7218ee15fe52564736f6c63430007060033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "1613:533:5:-:0;;;1697:42;1638:102;;;;;;;;;;;;;;;;;;;;1613:533;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "1613:533:5:-:0;;;;;",
+  "source": "/*\r\n\r\nÑíguez Randomity Engine API\r\n\r\nMIT License\r\n\r\nCopyright (c) 2019 niguezrandomityengine | Programmed and designed by Scheich R. Ahmed\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n\r\n*/\r\n\r\n// SPDX-License-Identifier: --🦉--\r\n\r\npragma solidity >= 0.4.0; // Compiler version incompatible error!\r\n\r\nabstract contract niguezRandomityEngine {\r\n\r\n\tfunction rd() external virtual returns (uint256);\r\n\tfunction rm() external virtual returns (uint256);\r\n\tfunction rv() external virtual returns (uint256);\r\n\tfunction rx() external virtual returns (uint256);\r\n\tfunction rf() external virtual returns (uint256);\r\n\r\n}\r\n\r\ncontract usingNRE {\r\n\r\n  niguezRandomityEngine internal nre = niguezRandomityEngine(0x031eaE8a8105217ab64359D4361022d0947f4572);\t\r\n\tfunction rd() internal returns (uint256) {\r\n        return nre.rd();\r\n    }\r\n\r\n\tfunction rf() internal returns (uint256) {\r\n        return nre.rf();\r\n    }\r\n\t\t\r\n\tfunction rm() internal returns (uint256) {\r\n        return nre.rm();\r\n    }\r\n\r\n\tfunction rv() internal returns (uint256) {\r\n        return nre.rv();\r\n    }\r\n\t\r\n\tfunction rx() internal returns (uint256) {\r\n        return nre.rx();\r\n    }\r\n}\r\n\r\n/*\r\nEnd of API\r\n*/\r\n",
+  "sourcePath": "C:\\Users\\Dhaval\\eth\\grise\\src\\contracts\\nreAPI.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Dhaval/eth/grise/src/contracts/nreAPI.sol",
+    "exportedSymbols": {
+      "niguezRandomityEngine": [
+        3089
+      ],
+      "usingNRE": [
+        3145
+      ]
+    },
+    "id": 3146,
+    "license": "--",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3063,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1232:25:5"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 3089,
+        "linearizedBaseContracts": [
+          3089
+        ],
+        "name": "niguezRandomityEngine",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "3ca36f88",
+            "id": 3068,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rd",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3064,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1358:2:5"
+            },
+            "returnParameters": {
+              "id": 3067,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3066,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3068,
+                  "src": "1387:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3065,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1387:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1386:9:5"
+            },
+            "scope": 3089,
+            "src": "1347:49:5",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "510fc61a",
+            "id": 3073,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rm",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3069,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1410:2:5"
+            },
+            "returnParameters": {
+              "id": 3072,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3071,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3073,
+                  "src": "1439:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3070,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1439:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1438:9:5"
+            },
+            "scope": 3089,
+            "src": "1399:49:5",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "5ebd95af",
+            "id": 3078,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rv",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3074,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1462:2:5"
+            },
+            "returnParameters": {
+              "id": 3077,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3076,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3078,
+                  "src": "1491:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3075,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1491:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1490:9:5"
+            },
+            "scope": 3089,
+            "src": "1451:49:5",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "bcb8b280",
+            "id": 3083,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rx",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3079,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1514:2:5"
+            },
+            "returnParameters": {
+              "id": 3082,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3081,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3083,
+                  "src": "1543:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3080,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1543:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1542:9:5"
+            },
+            "scope": 3089,
+            "src": "1503:49:5",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "bac506e0",
+            "id": 3088,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3084,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1566:2:5"
+            },
+            "returnParameters": {
+              "id": 3087,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3086,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3088,
+                  "src": "1595:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3085,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1595:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1594:9:5"
+            },
+            "scope": 3089,
+            "src": "1555:49:5",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3146,
+        "src": "1301:308:5"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 3145,
+        "linearizedBaseContracts": [
+          3145
+        ],
+        "name": "usingNRE",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3094,
+            "mutability": "mutable",
+            "name": "nre",
+            "nodeType": "VariableDeclaration",
+            "scope": 3145,
+            "src": "1638:102:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_niguezRandomityEngine_$3089",
+              "typeString": "contract niguezRandomityEngine"
+            },
+            "typeName": {
+              "id": 3090,
+              "name": "niguezRandomityEngine",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3089,
+              "src": "1638:21:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_niguezRandomityEngine_$3089",
+                "typeString": "contract niguezRandomityEngine"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "307830333165614538613831303532313761623634333539443433363130323264303934376634353732",
+                  "id": 3092,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "1697:42:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x031eaE8a8105217ab64359D4361022d0947f4572"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                ],
+                "id": 3091,
+                "name": "niguezRandomityEngine",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 3089,
+                "src": "1675:21:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_contract$_niguezRandomityEngine_$3089_$",
+                  "typeString": "type(contract niguezRandomityEngine)"
+                }
+              },
+              "id": 3093,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "1675:65:5",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_niguezRandomityEngine_$3089",
+                "typeString": "contract niguezRandomityEngine"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3103,
+              "nodeType": "Block",
+              "src": "1786:34:5",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 3099,
+                        "name": "nre",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3094,
+                        "src": "1804:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_niguezRandomityEngine_$3089",
+                          "typeString": "contract niguezRandomityEngine"
+                        }
+                      },
+                      "id": 3100,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "rd",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3068,
+                      "src": "1804:6:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_uint256_$",
+                        "typeString": "function () external returns (uint256)"
+                      }
+                    },
+                    "id": 3101,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1804:8:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3098,
+                  "id": 3102,
+                  "nodeType": "Return",
+                  "src": "1797:15:5"
+                }
+              ]
+            },
+            "id": 3104,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rd",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3095,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1756:2:5"
+            },
+            "returnParameters": {
+              "id": 3098,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3097,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3104,
+                  "src": "1777:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3096,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1777:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1776:9:5"
+            },
+            "scope": 3145,
+            "src": "1745:75:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3113,
+              "nodeType": "Block",
+              "src": "1866:34:5",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 3109,
+                        "name": "nre",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3094,
+                        "src": "1884:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_niguezRandomityEngine_$3089",
+                          "typeString": "contract niguezRandomityEngine"
+                        }
+                      },
+                      "id": 3110,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "rf",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3088,
+                      "src": "1884:6:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_uint256_$",
+                        "typeString": "function () external returns (uint256)"
+                      }
+                    },
+                    "id": 3111,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1884:8:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3108,
+                  "id": 3112,
+                  "nodeType": "Return",
+                  "src": "1877:15:5"
+                }
+              ]
+            },
+            "id": 3114,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3105,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1836:2:5"
+            },
+            "returnParameters": {
+              "id": 3108,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3107,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3114,
+                  "src": "1857:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3106,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1857:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1856:9:5"
+            },
+            "scope": 3145,
+            "src": "1825:75:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3123,
+              "nodeType": "Block",
+              "src": "1948:34:5",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 3119,
+                        "name": "nre",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3094,
+                        "src": "1966:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_niguezRandomityEngine_$3089",
+                          "typeString": "contract niguezRandomityEngine"
+                        }
+                      },
+                      "id": 3120,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "rm",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3073,
+                      "src": "1966:6:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_uint256_$",
+                        "typeString": "function () external returns (uint256)"
+                      }
+                    },
+                    "id": 3121,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1966:8:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3118,
+                  "id": 3122,
+                  "nodeType": "Return",
+                  "src": "1959:15:5"
+                }
+              ]
+            },
+            "id": 3124,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rm",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3115,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1918:2:5"
+            },
+            "returnParameters": {
+              "id": 3118,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3117,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3124,
+                  "src": "1939:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3116,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1939:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1938:9:5"
+            },
+            "scope": 3145,
+            "src": "1907:75:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3133,
+              "nodeType": "Block",
+              "src": "2028:34:5",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 3129,
+                        "name": "nre",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3094,
+                        "src": "2046:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_niguezRandomityEngine_$3089",
+                          "typeString": "contract niguezRandomityEngine"
+                        }
+                      },
+                      "id": 3130,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "rv",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3078,
+                      "src": "2046:6:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_uint256_$",
+                        "typeString": "function () external returns (uint256)"
+                      }
+                    },
+                    "id": 3131,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2046:8:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3128,
+                  "id": 3132,
+                  "nodeType": "Return",
+                  "src": "2039:15:5"
+                }
+              ]
+            },
+            "id": 3134,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rv",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3125,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1998:2:5"
+            },
+            "returnParameters": {
+              "id": 3128,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3127,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3134,
+                  "src": "2019:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3126,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2019:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2018:9:5"
+            },
+            "scope": 3145,
+            "src": "1987:75:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3143,
+              "nodeType": "Block",
+              "src": "2109:34:5",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 3139,
+                        "name": "nre",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3094,
+                        "src": "2127:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_niguezRandomityEngine_$3089",
+                          "typeString": "contract niguezRandomityEngine"
+                        }
+                      },
+                      "id": 3140,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "rx",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3083,
+                      "src": "2127:6:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_uint256_$",
+                        "typeString": "function () external returns (uint256)"
+                      }
+                    },
+                    "id": 3141,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2127:8:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3138,
+                  "id": 3142,
+                  "nodeType": "Return",
+                  "src": "2120:15:5"
+                }
+              ]
+            },
+            "id": 3144,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rx",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3135,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2079:2:5"
+            },
+            "returnParameters": {
+              "id": 3138,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3137,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3144,
+                  "src": "2100:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3136,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2100:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2099:9:5"
+            },
+            "scope": 3145,
+            "src": "2068:75:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 3146,
+        "src": "1613:533:5"
+      }
+    ],
+    "src": "1232:938:5"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/Dhaval/eth/grise/src/contracts/nreAPI.sol",
+      "exportedSymbols": {
+        "niguezRandomityEngine": [
+          3089
+        ],
+        "usingNRE": [
+          3145
+        ]
+      },
+      "license": "--"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".0"
+          ]
+        },
+        "id": 3063,
+        "name": "PragmaDirective",
+        "src": "1232:25:5"
+      },
+      {
+        "attributes": {
+          "abstract": true,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            3089
+          ],
+          "name": "niguezRandomityEngine",
+          "scope": 3146
+        },
+        "children": [
+          {
+            "attributes": {
+              "functionSelector": "3ca36f88",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "rd",
+              "scope": 3089,
+              "stateMutability": "nonpayable",
+              "virtual": true,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3064,
+                "name": "ParameterList",
+                "src": "1358:2:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 3068,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3065,
+                        "name": "ElementaryTypeName",
+                        "src": "1387:7:5"
+                      }
+                    ],
+                    "id": 3066,
+                    "name": "VariableDeclaration",
+                    "src": "1387:7:5"
+                  }
+                ],
+                "id": 3067,
+                "name": "ParameterList",
+                "src": "1386:9:5"
+              }
+            ],
+            "id": 3068,
+            "name": "FunctionDefinition",
+            "src": "1347:49:5"
+          },
+          {
+            "attributes": {
+              "functionSelector": "510fc61a",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "rm",
+              "scope": 3089,
+              "stateMutability": "nonpayable",
+              "virtual": true,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3069,
+                "name": "ParameterList",
+                "src": "1410:2:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 3073,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3070,
+                        "name": "ElementaryTypeName",
+                        "src": "1439:7:5"
+                      }
+                    ],
+                    "id": 3071,
+                    "name": "VariableDeclaration",
+                    "src": "1439:7:5"
+                  }
+                ],
+                "id": 3072,
+                "name": "ParameterList",
+                "src": "1438:9:5"
+              }
+            ],
+            "id": 3073,
+            "name": "FunctionDefinition",
+            "src": "1399:49:5"
+          },
+          {
+            "attributes": {
+              "functionSelector": "5ebd95af",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "rv",
+              "scope": 3089,
+              "stateMutability": "nonpayable",
+              "virtual": true,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3074,
+                "name": "ParameterList",
+                "src": "1462:2:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 3078,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3075,
+                        "name": "ElementaryTypeName",
+                        "src": "1491:7:5"
+                      }
+                    ],
+                    "id": 3076,
+                    "name": "VariableDeclaration",
+                    "src": "1491:7:5"
+                  }
+                ],
+                "id": 3077,
+                "name": "ParameterList",
+                "src": "1490:9:5"
+              }
+            ],
+            "id": 3078,
+            "name": "FunctionDefinition",
+            "src": "1451:49:5"
+          },
+          {
+            "attributes": {
+              "functionSelector": "bcb8b280",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "rx",
+              "scope": 3089,
+              "stateMutability": "nonpayable",
+              "virtual": true,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3079,
+                "name": "ParameterList",
+                "src": "1514:2:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 3083,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3080,
+                        "name": "ElementaryTypeName",
+                        "src": "1543:7:5"
+                      }
+                    ],
+                    "id": 3081,
+                    "name": "VariableDeclaration",
+                    "src": "1543:7:5"
+                  }
+                ],
+                "id": 3082,
+                "name": "ParameterList",
+                "src": "1542:9:5"
+              }
+            ],
+            "id": 3083,
+            "name": "FunctionDefinition",
+            "src": "1503:49:5"
+          },
+          {
+            "attributes": {
+              "functionSelector": "bac506e0",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "rf",
+              "scope": 3089,
+              "stateMutability": "nonpayable",
+              "virtual": true,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3084,
+                "name": "ParameterList",
+                "src": "1566:2:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 3088,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3085,
+                        "name": "ElementaryTypeName",
+                        "src": "1595:7:5"
+                      }
+                    ],
+                    "id": 3086,
+                    "name": "VariableDeclaration",
+                    "src": "1595:7:5"
+                  }
+                ],
+                "id": 3087,
+                "name": "ParameterList",
+                "src": "1594:9:5"
+              }
+            ],
+            "id": 3088,
+            "name": "FunctionDefinition",
+            "src": "1555:49:5"
+          }
+        ],
+        "id": 3089,
+        "name": "ContractDefinition",
+        "src": "1301:308:5"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            3145
+          ],
+          "name": "usingNRE",
+          "scope": 3146
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "nre",
+              "scope": 3145,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract niguezRandomityEngine",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "niguezRandomityEngine",
+                  "referencedDeclaration": 3089,
+                  "type": "contract niguezRandomityEngine"
+                },
+                "id": 3090,
+                "name": "UserDefinedTypeName",
+                "src": "1638:21:5"
+              },
+              {
+                "attributes": {
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "isStructConstructorCall": false,
+                  "lValueRequested": false,
+                  "names": [
+                    null
+                  ],
+                  "tryCall": false,
+                  "type": "contract niguezRandomityEngine",
+                  "type_conversion": true
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 3089,
+                      "type": "type(contract niguezRandomityEngine)",
+                      "value": "niguezRandomityEngine"
+                    },
+                    "id": 3091,
+                    "name": "Identifier",
+                    "src": "1675:21:5"
+                  },
+                  {
+                    "attributes": {
+                      "hexvalue": "307830333165614538613831303532313761623634333539443433363130323264303934376634353732",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "token": "number",
+                      "type": "address payable",
+                      "value": "0x031eaE8a8105217ab64359D4361022d0947f4572"
+                    },
+                    "id": 3092,
+                    "name": "Literal",
+                    "src": "1697:42:5"
+                  }
+                ],
+                "id": 3093,
+                "name": "FunctionCall",
+                "src": "1675:65:5"
+              }
+            ],
+            "id": 3094,
+            "name": "VariableDeclaration",
+            "src": "1638:102:5"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "rd",
+              "scope": 3145,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3095,
+                "name": "ParameterList",
+                "src": "1756:2:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 3104,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3096,
+                        "name": "ElementaryTypeName",
+                        "src": "1777:7:5"
+                      }
+                    ],
+                    "id": 3097,
+                    "name": "VariableDeclaration",
+                    "src": "1777:7:5"
+                  }
+                ],
+                "id": 3098,
+                "name": "ParameterList",
+                "src": "1776:9:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 3098
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "rd",
+                              "referencedDeclaration": 3068,
+                              "type": "function () external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 3094,
+                                  "type": "contract niguezRandomityEngine",
+                                  "value": "nre"
+                                },
+                                "id": 3099,
+                                "name": "Identifier",
+                                "src": "1804:3:5"
+                              }
+                            ],
+                            "id": 3100,
+                            "name": "MemberAccess",
+                            "src": "1804:6:5"
+                          }
+                        ],
+                        "id": 3101,
+                        "name": "FunctionCall",
+                        "src": "1804:8:5"
+                      }
+                    ],
+                    "id": 3102,
+                    "name": "Return",
+                    "src": "1797:15:5"
+                  }
+                ],
+                "id": 3103,
+                "name": "Block",
+                "src": "1786:34:5"
+              }
+            ],
+            "id": 3104,
+            "name": "FunctionDefinition",
+            "src": "1745:75:5"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "rf",
+              "scope": 3145,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3105,
+                "name": "ParameterList",
+                "src": "1836:2:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 3114,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3106,
+                        "name": "ElementaryTypeName",
+                        "src": "1857:7:5"
+                      }
+                    ],
+                    "id": 3107,
+                    "name": "VariableDeclaration",
+                    "src": "1857:7:5"
+                  }
+                ],
+                "id": 3108,
+                "name": "ParameterList",
+                "src": "1856:9:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 3108
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "rf",
+                              "referencedDeclaration": 3088,
+                              "type": "function () external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 3094,
+                                  "type": "contract niguezRandomityEngine",
+                                  "value": "nre"
+                                },
+                                "id": 3109,
+                                "name": "Identifier",
+                                "src": "1884:3:5"
+                              }
+                            ],
+                            "id": 3110,
+                            "name": "MemberAccess",
+                            "src": "1884:6:5"
+                          }
+                        ],
+                        "id": 3111,
+                        "name": "FunctionCall",
+                        "src": "1884:8:5"
+                      }
+                    ],
+                    "id": 3112,
+                    "name": "Return",
+                    "src": "1877:15:5"
+                  }
+                ],
+                "id": 3113,
+                "name": "Block",
+                "src": "1866:34:5"
+              }
+            ],
+            "id": 3114,
+            "name": "FunctionDefinition",
+            "src": "1825:75:5"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "rm",
+              "scope": 3145,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3115,
+                "name": "ParameterList",
+                "src": "1918:2:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 3124,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3116,
+                        "name": "ElementaryTypeName",
+                        "src": "1939:7:5"
+                      }
+                    ],
+                    "id": 3117,
+                    "name": "VariableDeclaration",
+                    "src": "1939:7:5"
+                  }
+                ],
+                "id": 3118,
+                "name": "ParameterList",
+                "src": "1938:9:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 3118
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "rm",
+                              "referencedDeclaration": 3073,
+                              "type": "function () external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 3094,
+                                  "type": "contract niguezRandomityEngine",
+                                  "value": "nre"
+                                },
+                                "id": 3119,
+                                "name": "Identifier",
+                                "src": "1966:3:5"
+                              }
+                            ],
+                            "id": 3120,
+                            "name": "MemberAccess",
+                            "src": "1966:6:5"
+                          }
+                        ],
+                        "id": 3121,
+                        "name": "FunctionCall",
+                        "src": "1966:8:5"
+                      }
+                    ],
+                    "id": 3122,
+                    "name": "Return",
+                    "src": "1959:15:5"
+                  }
+                ],
+                "id": 3123,
+                "name": "Block",
+                "src": "1948:34:5"
+              }
+            ],
+            "id": 3124,
+            "name": "FunctionDefinition",
+            "src": "1907:75:5"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "rv",
+              "scope": 3145,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3125,
+                "name": "ParameterList",
+                "src": "1998:2:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 3134,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3126,
+                        "name": "ElementaryTypeName",
+                        "src": "2019:7:5"
+                      }
+                    ],
+                    "id": 3127,
+                    "name": "VariableDeclaration",
+                    "src": "2019:7:5"
+                  }
+                ],
+                "id": 3128,
+                "name": "ParameterList",
+                "src": "2018:9:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 3128
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "rv",
+                              "referencedDeclaration": 3078,
+                              "type": "function () external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 3094,
+                                  "type": "contract niguezRandomityEngine",
+                                  "value": "nre"
+                                },
+                                "id": 3129,
+                                "name": "Identifier",
+                                "src": "2046:3:5"
+                              }
+                            ],
+                            "id": 3130,
+                            "name": "MemberAccess",
+                            "src": "2046:6:5"
+                          }
+                        ],
+                        "id": 3131,
+                        "name": "FunctionCall",
+                        "src": "2046:8:5"
+                      }
+                    ],
+                    "id": 3132,
+                    "name": "Return",
+                    "src": "2039:15:5"
+                  }
+                ],
+                "id": 3133,
+                "name": "Block",
+                "src": "2028:34:5"
+              }
+            ],
+            "id": 3134,
+            "name": "FunctionDefinition",
+            "src": "1987:75:5"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "rx",
+              "scope": 3145,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3135,
+                "name": "ParameterList",
+                "src": "2079:2:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 3144,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3136,
+                        "name": "ElementaryTypeName",
+                        "src": "2100:7:5"
+                      }
+                    ],
+                    "id": 3137,
+                    "name": "VariableDeclaration",
+                    "src": "2100:7:5"
+                  }
+                ],
+                "id": 3138,
+                "name": "ParameterList",
+                "src": "2099:9:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 3138
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "rx",
+                              "referencedDeclaration": 3083,
+                              "type": "function () external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 3094,
+                                  "type": "contract niguezRandomityEngine",
+                                  "value": "nre"
+                                },
+                                "id": 3139,
+                                "name": "Identifier",
+                                "src": "2127:3:5"
+                              }
+                            ],
+                            "id": 3140,
+                            "name": "MemberAccess",
+                            "src": "2127:6:5"
+                          }
+                        ],
+                        "id": 3141,
+                        "name": "FunctionCall",
+                        "src": "2127:8:5"
+                      }
+                    ],
+                    "id": 3142,
+                    "name": "Return",
+                    "src": "2120:15:5"
+                  }
+                ],
+                "id": 3143,
+                "name": "Block",
+                "src": "2109:34:5"
+              }
+            ],
+            "id": 3144,
+            "name": "FunctionDefinition",
+            "src": "2068:75:5"
+          }
+        ],
+        "id": 3145,
+        "name": "ContractDefinition",
+        "src": "1613:533:5"
+      }
+    ],
+    "id": 3146,
+    "name": "SourceUnit",
+    "src": "1232:938:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-03-11T16:47:24.951Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,119 @@
+<div style=" height: 100%;">
+
+  <div class="personal">
+    <h1 class="personal_title">Staking Statistics</h1>
+  </div>
+
+
+  <div class="sub-end-part">
+
+    <!-- <div style=" border-bottom: 2px solid grey;margin-bottom: 40px;"></div> -->
+
+    <div class="first">
+      <div class="first_table">
+        <div data-v-1c14e0d6="" class="pa-0 ma-2 v-card v-sheet v-sheet--outlined  table_wid "
+          style=" background-color: grey; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);padding: 17px; border-radius: 10px">
+          <div class="title_box" style="color: #d7d7d7;line-height:40px;"> Stake Statistics </div>
+          <hr role="separator" aria-orientation="horizontal" class="mx-2 v-divider ">
+          <table style="width: -webkit-fill-available;">
+            <tbody style="text-align: left;">
+              <tr>
+                <td>Total staked</td>
+                <td class="text-right px-1"> {{stakeCount?.totalStakeCount ? stakeCount?.totalStakeCount : '-' }} </td>
+              </tr>
+              <tr>
+                <td>Short-term stake</td>
+                <td class="text-right px-1"> {{stakeCount?.stStakeCount ? stakeCount?.stStakeCount : '-' }} </td>
+              </tr>
+              <tr>
+                <td>Medium-term stake</td>
+                <td class="text-right px-1">{{stakeCount?.mtStakeCount ? stakeCount?.mtStakeCount : '-' }}</td>
+              </tr>
+              <tr>
+                <td class="px-5">3-Month</td>
+                <td class="text-right px-1"> {{stakeCount?.mt3MonthStakeCount ? stakeCount?.mt3MonthStakeCount : '-' }} </td>
+              </tr>
+              <tr>
+                <td class="px-5">6-Month</td>
+                <td class="text-right px-1"> {{stakeCount?.mt6MonthStakeCount ? stakeCount?.mt6MonthStakeCount : '-' }} </td>
+              </tr>
+              <tr>
+                <td class="px-5">9-Month</td>
+                <td class="text-right px-1"> {{stakeCount?.mt9MonthStakeCount ? stakeCount?.mt9MonthStakeCount : '-' }} </td>
+              </tr>
+              <tr>
+                <td>Long-term stake</td>
+                <td class="text-right px-1"> {{stakeCount?.ltStakeCount ? stakeCount?.ltStakeCount : '-' }} </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="first_graph">
+        <div class="chart-wrapper" *ngIf="stakeCount && stakeCount.totalStakeCount > 0">
+          <canvas baseChart [data]="pieChartStakeCountData" [labels]="pieChartLabels" chartType="pie"
+            [options]="pieChartOptions">
+          </canvas>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="second">
+      <div class="second_table">
+        <div class="pa-0  v-card v-sheet v-sheet--outlined table_wid"
+          style=" background-color: grey; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);padding: 17px;border-radius: 10px">
+          <div class=" title_box  " style="color: #d7d7d7;line-height:40px;"> Staking Slot Availablity </div>
+          <hr role="separator" aria-orientation="horizontal" class="mx-2 v-divider ">
+          <table style="width: -webkit-fill-available;">
+            <tbody style="text-align: left;">
+
+              <tr>
+                <td>Short-term staking Slot</td>
+                <td class="text-right px-1"> {{slotLeft?.stSlotLeft ? slotLeft?.stSlotLeft : '-' }} </td>
+              </tr>
+              <tr>
+                <td>Medium-term staking Slot</td>
+                <td class="text-right px-1">{{slotLeft?.mtSlotLeft ? slotLeft?.mtSlotLeft : '-' }}</td>
+              </tr>
+              <tr>
+                <td class="px-5">3-Month</td>
+                <td class="text-right px-1"> {{slotLeft?.mt3MonthSlotLeft ? slotLeft?.mt3MonthSlotLeft : '-' }} </td>
+              </tr>
+              <tr>
+                <td class="px-5">6-Month</td>
+                <td class="text-right px-1"> {{slotLeft?.mt6MonthSlotLeft ? slotLeft?.mt6MonthSlotLeft : '-' }} </td>
+              </tr>
+              <tr>
+                <td class="px-5">9-Month</td>
+                <td class="text-right px-1"> {{slotLeft?.mt9MonthSlotLeft ? slotLeft?.mt9MonthSlotLeft : '-' }} </td>
+              </tr>
+              <tr>
+                <td>Long-term staking Slots</td>
+                <td class="text-right px-1"> {{slotLeft?.ltSlotLeft ? slotLeft?.ltSlotLeft : '-' }} </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="second_graph">
+        <div class="chart-wrapper" *ngIf="slotLeft">
+          <canvas baseChart [data]="pieChartSlotLeftData" [labels]="pieChartLabels" chartType="pie"
+            [options]="pieChartOptions">
+          </canvas>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</div>
+
+<div style="margin:40px 0px"></div>
+<div style="margin:40px 0px"></div>

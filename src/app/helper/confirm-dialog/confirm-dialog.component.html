@@ -1,0 +1,47 @@
+<div class="dialog-container">
+  <h1 mat-dialog-title>Confirmation</h1>
+  <div mat-dialog-content *ngIf="data?.dialogType == 0">
+    <h3>Do you want to continue to cancel stake...?</h3>
+    <table>
+      <tr *ngIf="data?.transaction?.stakeBasicData?.penaltyAmount != 0">
+        <td>Stake Penalty Amount:</td>
+        <td>{{ data?.transaction?.stakeBasicData?.penaltyAmount | number:'1.0-2' }} Grise</td>
+      </tr>
+    </table>
+  </div>
+  <div mat-dialog-content *ngIf="data?.dialogType == 1">
+    <h3>Do you want to continue to scrape reward...?</h3>
+    <table>
+      <tr *ngIf="data?.transaction?.stakeRewardData?.transcRewardAmount != 0">
+        <td>Transaction Fees Reward:</td>
+        <td>{{ data?.transaction?.stakeRewardData?.transcRewardAmount | number: '1.0-2' }} Grise</td>
+      </tr>
+      <tr *ngIf="data?.transaction?.stakeRewardData?.penaltyRewardAmount != 0">
+        <td>Cancellation Penalty Reward:</td>
+        <td>{{ data?.transaction?.stakeRewardData?.penaltyRewardAmount | number: '1.0-2' }} Grise</td>
+      </tr>
+      <tr *ngIf="data?.transaction?.stakeRewardData?.reservoirRewardAmount != 0">
+        <td>Reservoir Reward:</td>
+        <td>{{ data?.transaction?.stakeRewardData?.reservoirRewardAmount | number: '1.0-2' }} Grise</td>
+      </tr>
+      <tr *ngIf="data?.transaction?.stakeRewardData?.inflationRewardAmount != 0">
+        <td>Inflation Reward:</td>
+        <td>{{ data?.transaction?.stakeRewardData?.inflationRewardAmount | number: '1.0-2' }} Grise</td>
+      </tr>
+      <tr *ngIf="data?.haveMultiReward">
+        <td></td>
+        <td></td>
+      </tr>
+      <tr *ngIf="data?.haveMultiReward">
+        <td>Total Scrape Reward:</td>
+        <td>{{ data?.totalScrapeReward | number: '1.0-2' }} Grise</td>
+      </tr>
+    </table>
+  </div>
+  <div mat-dialog-actions>
+    <button class="btn btn-primary tab-button" mat-button [mat-dialog-close]="data.transaction" cdkFocusInitial><i
+        class="fas fa-check"></i> Yes</button>
+    <button class="btn btn-primary tab-button" mat-button (click)="onNoClick()"><i class="fas fa-times"></i>
+      No</button>
+  </div>
+</div>

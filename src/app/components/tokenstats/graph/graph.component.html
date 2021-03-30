@@ -1,0 +1,90 @@
+<div style="height: 100%;">
+  <div class="personal">
+    <h1 class="personal_title">Graph</h1>
+  </div>
+  <div class="sub-end-part">
+    <div style="border-bottom: 2px solid grey;margin-bottom: 40px;"></div>
+    <div>
+      <div class="row" style="margin-top: 5%;">
+        <div class="col-sm-4">
+          <div class="box_lable">
+            <br>
+            <span class="box">{{ tokenLocked ? (tokenLocked | number: '1.0-0') : '-' }}</span>
+            <br>
+            <h4 class="label">Token Locked in Liquidity</h4>
+            <br>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="box_lable">
+            <br>
+            <span class="box">{{ tokenCirculating ? (tokenCirculating | number: '1.0-0') : '-' }}</span>
+            <br>
+            <h4 class="label">Token Freely Circulating</h4>
+            <br>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="box_lable">
+            <br>
+            <span class="box">{{ totalStakedToken ? (totalStakedToken | number: '1.0-0') : '-' }}</span>
+            <br>
+            <h4 class="label">Total Staked</h4>
+            <br>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="table_chart d-flex justify-content-center">
+        <div class="left_table" style="margin-top: 30px; border-collapse: collapse; ">
+          <table class="table table-dark">
+            <tr>
+              <th class="tbl-description">Market Data</th>
+              <th class="tbl-usd">USD</th>
+              <th class="tbl-eth">ETH</th>
+            </tr>
+            <tr>
+              <td class="tbl-description">Total Marketcap</td>
+              <td class="tbl-usd">{{ usdGraphTableData?.totalMarketCap ? (usdGraphTableData?.totalMarketCap | number: '1.0-0') : '-' }}</td>
+              <td class="tbl-eth">{{ ethGraphTableData?.totalMarketCap ? (ethGraphTableData?.totalMarketCap | number: '1.0-0') : '-' }}</td>
+            </tr>
+            <tr>
+              <td class="tbl-description">Circulating Supply</td>
+              <td class="tbl-usd">{{ usdGraphTableData?.circulatingSupply ? (usdGraphTableData?.circulatingSupply | number: '1.0-0') : '-' }}</td>
+              <td class="tbl-eth">{{ ethGraphTableData?.circulatingSupply ? (ethGraphTableData?.circulatingSupply | number: '1.0-0') : '-' }}</td>
+            </tr>
+            <tr>
+              <td class="tbl-description">Initial Price (1 Grise)</td>
+              <td class="tbl-usd">{{ usdGraphTableData?.initialPrice ? (usdGraphTableData?.initialPrice | number: '1.5-5') : '-' }}</td>
+              <td class="tbl-eth">{{ ethGraphTableData?.initialPrice ? (ethGraphTableData?.initialPrice | number: '1.5-5') : '-' }}</td>
+            </tr>
+            <tr>
+              <td class="tbl-description">Current Price</td>
+              <td class="tbl-usd">{{ usdGraphTableData?.currentPrice ? (usdGraphTableData?.currentPrice | number: '1.5-5') : '-' }}</td>
+              <td class="tbl-eth">{{ ethGraphTableData?.currentPrice ? (ethGraphTableData?.currentPrice | number: '1.5-5') : '-' }}</td>
+            </tr>
+            <tr>
+              <td class="tbl-description">ROI on Initial Price</td>
+              <td class="tbl-usd">{{ usdGraphTableData?.roiOnInitalPrice ? (usdGraphTableData?.roiOnInitalPrice | percent: '1.3-3') : '-' }}</td>
+              <td class="tbl-eth">{{ ethGraphTableData?.roiOnInitalPrice ? (ethGraphTableData?.roiOnInitalPrice | percent: '1.3-3') : '-' }}</td>
+            </tr>
+            <tr>
+              <td class="tbl-description">Factor on Initial Price</td>
+              <td class="tbl-usd">{{ usdGraphTableData?.factorOnInitialPrice ? (usdGraphTableData?.factorOnInitialPrice | number: '1.5-5') : '-' }}</td>
+              <td class="tbl-eth">{{ ethGraphTableData?.factorOnInitialPrice ? (ethGraphTableData?.factorOnInitialPrice | number: '1.5-5') : '-' }}</td>
+            </tr>
+          </table>
+          <br> <br> <br>
+        </div>
+      </div>
+      <div *ngIf="tokenDayDatas">
+        <div class="d-flex justify-content-center line-chart">
+          <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+            [colors]="lineChartColors" chartType="line" [plugins]="lineChartPlugins">
+          </canvas>
+        </div>
+        <br> <br> <br>
+      </div>
+    </div>
+  </div>
+</div>

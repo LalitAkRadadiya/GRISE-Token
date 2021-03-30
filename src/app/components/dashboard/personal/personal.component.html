@@ -1,0 +1,205 @@
+<div style="background-color: rgb(59, 65, 72);">
+    <div class="personal">
+        <!-- <img style="width: 250px" src="../../../assets/logo.png"> -->
+        <i class="fas fa-chalkboard-teacher personal_icon"></i>
+        <h1 class="personal_title">Personal Dashboard</h1>
+    </div>
+    <div class="sub-end-part">
+        <!-- <div style=" border-bottom: 2px solid grey;margin-bottom: 40px;"></div> -->
+        <div class=" row maintab ">
+            <div class="tab" [ngClass]="{'active-tab': selectedPeriod == 'W'}" (click)="onTabClick('W')">
+                <h2>Weekly Stake</h2>
+                <div class="subtab">
+                    <h3>Slot Left</h3>
+                    <h1 style="font-size:55px">{{weeklyPeriodStake.slotLeft}}</h1>
+                </div>
+                <br>
+                <div class="mat-dropdown-container">
+                    <mat-select placeholder="Select Week" [(value)]="weekly.periodValue" (selectionChange)="changePeriodStake('W')"
+                        class="mat-dropdown">
+                        <mat-option [value]="1">1 Week </mat-option>
+                        <mat-option [value]="2">2 Week </mat-option>
+                        <mat-option [value]="3">3 Week </mat-option>
+                        <mat-option [value]="4">4 Week </mat-option>
+                        <mat-option [value]="5">5 Week </mat-option>
+                        <mat-option [value]="6">6 Week </mat-option>
+                        <mat-option [value]="7">7 Week </mat-option>
+                        <mat-option [value]="8">8 Week </mat-option>
+                        <mat-option [value]="9">9 Week </mat-option>
+                        <mat-option [value]="10">10 Week </mat-option>
+                        <mat-option [value]="11">11 Week </mat-option>
+                        <mat-option [value]="12">12 Week </mat-option>
+                    </mat-select>
+                </div>
+                <div class="mat-btn-group-container">
+                    <button mat-button class="small_button left" (click)="decrement('W')">- </button>
+                    <input class="small_input" style="margin-left: 0px;text-align: center" name="weeklyStakeValue"
+                        [(ngModel)]="weekly.stakeValue" disabled>
+                    <button mat-button class="small_button right" (click)="increment('W')">+</button>
+                </div>
+            </div>
+            <div style="width: 2%"></div>
+            <div class="tab" [ngClass]="{'active-tab': selectedPeriod == 'M'}" (click)="onTabClick('M')">
+                <h2>Monthly Stake</h2>
+                <div class="subtab">
+                    <h3>Slot Left</h3>
+                    <h1 style="font-size:55px">{{monthlyPeriodStake ? monthlyPeriodStake.slotLeft : 0}}</h1>
+                </div>
+                <br>
+                <div class="mat-dropdown-container">
+                    <mat-select placeholder="Select Month" [(value)]="monthly.periodValue" (selectionChange)="changePeriodStake('M')"
+                        class="mat-dropdown">
+                        <mat-option [value]="3">3 Month</mat-option>
+                        <mat-option [value]="6">6 Month</mat-option>
+                        <mat-option [value]="9">9 Month</mat-option>
+                    </mat-select>
+                </div>
+                <div class="mat-btn-group-container" style="">
+                    <button mat-button class="small_button left" (click)="decrement('M')">-</button>
+                    <input class="small_input" style="margin-left: 0px;text-align: center" name="monthlyStakeValue"
+                        [(ngModel)]="monthly.stakeValue" disabled>
+                    <button mat-button class="small_button right" (click)="increment('M')">+</button>
+                </div>
+            </div>
+            <div style="width: 2%"></div>
+            <div class="tab" [ngClass]="{'active-tab': selectedPeriod == 'Y'}" (click)="onTabClick('Y')">
+                <h2>Yearly Stake</h2>
+                <div class="subtab">
+                    <h3>Slot Left</h3>
+                    <h1 style="font-size:55px">{{yearlyPeriodStake.slotLeft}}</h1>
+                </div>
+                <br>
+                <div class="mat-dropdown-container">
+                    <mat-select placeholder="Select Year" [(value)]="yearly.periodValue" (selectionChange)="changePeriodStake('Y')"
+                        class="mat-dropdown">
+                        <mat-option [value]="1">1 Year </mat-option>
+                        <mat-option [value]="2">2 Year </mat-option>
+                        <mat-option [value]="3">3 Year </mat-option>
+                        <mat-option [value]="4">4 Year </mat-option>
+                        <mat-option [value]="5">5 Year </mat-option>
+                        <mat-option [value]="6">6 Year </mat-option>
+                        <mat-option [value]="7">7 Year </mat-option>
+                        <mat-option [value]="8">8 Year </mat-option>
+                        <mat-option [value]="9">9 Year </mat-option>
+                        <mat-option [value]="10">10 Year </mat-option>
+                    </mat-select>
+                </div>
+                <div class="mat-btn-group-container">
+                    <button mat-button class="small_button left"  (click)="decrement('Y')">-</button>
+                    <input class="small_input" style="margin-left: 0px;text-align: center" name="yearlyStakeValue"
+                        [(ngModel)]="yearly.stakeValue" disabled>
+                    <button mat-button class="small_button right"(click)="increment('Y')">+</button>
+                </div>                
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary staking_button" [disabled]="checkValueWithGriseBalance()" 
+                (click)="createGriseStake()">{{ griseValidationText ? griseValidationText : 'Create Stake(Grise)' }}</button>
+            <button type="button" class="btn btn-primary staking_button" [disabled]="checkValueWithEthBalance()" 
+                (click)="createEthStake()">{{ ethValidationText ? ethValidationText : 'Create Stake(ETH)' }}</button>
+        </div>
+        <div class="line-splitter"></div>
+        <div>
+            <table style="margin-left: auto; margin-right: auto; color: #ffffff;">
+                <tr>
+                    <td>Time to Claim Weekly Reward</td>
+                    <td>
+                        <progress id="weekly-reward-progress" [value]="weeklyDaysProgress" max="100"></progress>
+                        <span *ngIf="weeklyDaysLeft" class="progress-text">({{ weeklyDaysLeft }} days left)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Time to Claim Monthly Reward</td>
+                    <td>
+                        <progress id="monthly-reward-progress" [value]="monthlyDaysProgress" max="100"></progress>
+                        <span *ngIf="monthlyDaysLeft" class="progress-text">({{ monthlyDaysLeft }} days left)</span>
+                    </td>
+                </tr>
+            </table>
+            <div class="line-splitter"></div>
+        </div>
+        <!-- class="tab_slot" -->
+        <div style="margin-left: 10%;">
+            <div *ngFor="let stakeTran of stakeTransactions">
+                <div class="tab_slot" >
+                    <div>
+                        <table style="margin-left: auto; margin-right: auto; color: #ffffff;">
+                            <tr style="font-size: 16px;" >
+                                <td colspan="2" class="slot_title">{{ stakeTran.stakeTypeName }}</td>
+                            </tr>
+                            <tr>
+                                <td>Stake Created</td>
+                                <td>
+                                    <span>
+                                        {{ stakeTran.stakeCreatedOn | date }} ({{ stakeTran.stakeBasicData?.lockDays }} days)
+                                    </span>
+                                </td><br>
+                            </tr>
+                            <tr *ngIf="stakeTran.stakeProgress && stakeTran.stakeBasicData && stakeTran.stakeBasicData.isActive" >
+                                <td>Stake Progress</td>
+                                <td>
+                                    <progress id="stake-progress" [value]="stakeTran.stakeProgress" max="100"></progress>
+                                </td>
+                            </tr>
+                            <tr *ngIf="stakeTran.stakeBasicData && stakeTran.stakeBasicData.isActive">
+                                <td>Lock Up</td>
+                                <td><span>{{ stakeTran.stakeLockUpOn | date }} ({{ stakeTran.stakeLockUpDaysLeft }} days left)</span></td>
+                            </tr>
+                            <tr *ngIf="stakeTran.stakeBasicData && stakeTran.stakeBasicData.scrapeDay != 0">
+                                <td>Scraped On</td>
+                                <td><span>{{ stakeTran.stakeScrapeOn | date }}</span></td>
+                            </tr>
+                            <tr *ngIf="stakeTran.stakeBasicData && stakeTran.stakeBasicData.closeDay != 0">
+                                <td>Closed On</td>
+                                <td><span>{{ stakeTran.stakeCloseOn | date }}</span></td>
+                            </tr>
+                            <tr>
+                                <!-- <td>Stake ID</td>
+                                <td class="trancate">{{ stakeTran.stakeId }} </td> -->
+                            </tr>                    
+                            <tr>
+                                <td>Amount Staked</td>
+                                <td><span>{{ stakeTran.stakeBasicData?.stakedAmount }}</span></td>
+                            </tr>
+                            <tr>
+                                <td>Transaction Fees Reward</td>
+                                <td><span>{{ stakeTran.stakeRewardData?.transcRewardAmount | number: '1.0-2' }} Grise</span></td>
+                            </tr>
+                            <tr>
+                                <td>Cancellation Penalty Reward</td>
+                                <td><span>{{ stakeTran.stakeRewardData?.penaltyRewardAmount | number: '1.0-2' }} Grise</span></td>
+                            </tr>
+                            <tr *ngIf="stakeTran.stakeBasicData && stakeTran.stakeBasicData.stakeType != 0">
+                                <td>Reservoir Reward</td>
+                                <td><span>{{ stakeTran.stakeRewardData?.reservoirRewardAmount | number: '1.0-2' }} Grise</span></td>
+                            </tr>
+                            <tr *ngIf="false">
+                                <td>Inflation Reward</td>
+                                <td><span>{{ stakeTran.stakeRewardData?.inflationRewardAmount | number: '1.0-2' }} Grise</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div *ngIf="stakeTran.stakeBasicData?.isActive" >
+                        <button type="button" [disabled]="checkScarpeReward(stakeTran) ? null : 'disabled'" class="btn btn-primary"
+                            (click)="scrapeReward(stakeTran)">Scarpe Reward</button>
+                        <button type="button" class="btn btn-primary" (click)="endStake(stakeTran)">{{ stakeTran.stakeBasicData?.isMature ? 'End' : 'Cancel' }} Stake</button>
+                    </div>
+                    
+        
+                   
+                    
+                </div>
+                <div class="line-splitter" style="width: 90%;"></div>
+            </div>
+           
+            
+        </div>
+        <!-- <div *ngIf="stakeTransactions" class="line-splitter"></div> -->
+        <div *ngIf="!reachMaxRecords">
+            <button type="button" class="btn btn-primary staking_button" (click)="loadMore()">Load more...</button>
+        </div>
+        <div class="grise">
+            <!-- <img style="width: 250px" src="../../../assets/logo.png"> -->
+        </div>
+    </div>
+</div>

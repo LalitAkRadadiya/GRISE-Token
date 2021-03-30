@@ -1,0 +1,102 @@
+<div style="background-color: rgb(59, 65, 72); height: 100%;">
+
+  <div class="personal">
+    <!-- <img style="width: 250px" src="../../../assets/logo.png"> -->
+    <i class="fas fa-coins personal_icon"></i>
+    <h1 class="personal_title">Liquidity Event</h1>
+  </div>
+  <div class="sub-end-part">
+
+    <!-- <div style=" border-bottom: 2px solid grey;margin-bottom: 40px;"></div> -->
+    <div class="row main">
+      <div class="tab">
+
+        <h4 class="tab-header">
+          Total eth contributed for all Grise reservation days
+        </h4>
+        <div class="timebox">
+          <!-- <i class="fab fa-bandcamp" style="font-size: 30px;color: white"></i> -->
+          <button class="ether">
+            <i class="fab fa-ethereum" style="font-size: 30px"></i>
+          </button>
+
+          <span class="digit">{{ liquidityEventData?.totalInvestment | number:'1.0-5' }} ETH</span>
+        </div>
+      </div>
+      <div style="width:2%"></div>
+      <div class="tab">
+        <h4 class="tab-header">
+          Total Time left until liquidity event is closed
+        </h4>
+        <div class="timebox">
+          <button class="ether">
+            <i class="fa fa-clock" style="font-size: 30px;" aria-hidden="true"></i>
+          </button>
+
+          <span class="digit">
+            <!-- <countdown [config]="{leftTime: 3444440}"></countdown> -->
+
+            <span style="color: white" id="tokentimer1">{{ timeLeft }}</span>
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row upper" >
+      <!-- <div class="col-sm-3" >
+                <div class="box_lable">
+                    <br>
+                  <span class="box">100</span>  
+                  <br>
+                  <h4 class="label">Grise Reservation</h4>
+                  <br>
+                </div>
+              </div> -->
+      <div class="col-md-4">
+        <div class="box_lable">
+          <br>
+          <span class="box">{{ liquidityEventData?.uniqueInvestorCount }}</span>
+          <br>
+          <h4 class="label">Unique contributor</h4>
+          <br>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="box_lable">
+          <br>
+          <span class="box">{{ liquidityEventData?.referralAccountCount }}</span>
+          <br>
+          <h4 class="label">Unique Referrer</h4>
+          <br>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="box_lable">
+          <br>
+          <span class="box">{{ (liquidityEventData && liquidityEventData.currentLPDay >= 0) ? liquidityEventData.currentLPDay : '-' }}</span>
+          <br>
+          <h4 class="label">Current Grise Slot</h4>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="row upper" >
+      <div class="col-md-4 extra"></div>
+      <div class="col-md-4">
+        <div class="box_lable">
+          <br>
+          <span class="box">{{ claimableAmount | number: '1.0-2' }}</span>
+          <br>
+          <h4 class="label">Claimable Amount</h4>
+          <br>
+        </div>
+      </div>
+      <div class="col-md-4 extra"></div>
+    </div>
+    <br>
+    <button type="button" [disabled]="checkClaimGrise()"
+      class="btn btn-primary staking_button" (click)="claimGriseToken()">Claim Grise Token</button>
+
+  </div>
+</div>

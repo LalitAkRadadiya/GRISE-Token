@@ -1,0 +1,185 @@
+button {
+  background: linear-gradient(89.02deg, #6226D9 0.89%, #8C52FF 100%) !important;
+  border-radius: 10px;
+  margin: 10px;
+  outline: none;
+}
+
+label {
+  margin-left: 2%;
+}
+
+.col-sm-4 {
+  color: #f1f1f1;
+}
+.mat-btn-group-container{
+  display: inline-flex;
+}
+td,
+th {
+  text-align: left;
+  padding: 8px;
+}
+
+.maintab {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.tab {
+  padding: 15px;
+  text-align: center;
+  color: #f1f1f1;
+  width: 31%;
+  // text-align: left;
+  border-radius: 30px;
+  box-shadow: 19px 7px 68px #292a29;
+
+  div>label,
+  input {
+    margin-left: 30px;
+  }
+}
+.slot_title{
+  padding-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 900;
+    color: #884efc;
+}
+.tab_slot{
+  padding: 15px;
+  text-align: center;
+  color: #f1f1f1;
+  
+  width: 90%;
+  // text-align: left;
+  border-radius: 30px;
+  box-shadow: 19px 7px 68px #292a29;
+
+ 
+}
+
+.active-tab {
+  background-color: gray;
+}
+
+.subtab {
+  padding: 15px;
+  text-align: center;
+  color: #f1f1f1;
+
+  border-radius: 30px;
+  box-shadow: 19px 7px 68px #292a29;
+}
+
+.mat-select-value {
+  color: rgb(206 24 24 / 87%) !important;
+}
+
+@media(max-width:992px) {
+  .tab {
+    width: 100%;
+  }
+
+  .maintab {
+    display: inline;
+  }
+}
+
+mat-option {
+  text-align: center;
+}
+
+.col-sm-4 {
+  padding-left: 10%;
+  text-align: left;
+}
+
+label {
+  font-size: 25px;
+  margin: 10px;
+}
+
+.dropdown {
+  background-color: white;
+  border-radius: 20px;
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+}
+
+.input-number {
+  margin: 0px;
+}
+
+.small_button {
+  width: 10px;
+  border-radius: 0px;
+  margin: 0px;
+  font-size: 30px;
+  height: 50px;
+}
+
+.small_input {
+  width: 140px;
+  height: 50px;
+  color: black;
+  margin-left: 0px;
+  height: 50px;
+  font-size: 30px;
+
+}
+
+.left {
+  border-radius: 20px 0 0 20px;
+}
+
+.right {
+  border-radius: 0 20px 20px 0;
+}
+
+.staking_button {
+  width: 210px;
+  height: 40px;
+  border-radius: 10px;
+  width: 210px;
+  margin-bottom: 30px;
+}
+
+.mat-dropdown-container {
+  width: 100%;
+  text-align: center;
+}
+
+.mat-dropdown {
+  background-color: white;
+  border-radius: 20px;
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+}
+
+.mat-btn-group-container {
+  margin: 20px;
+  zoom: 0.7;
+}
+
+.line-splitter {
+  margin-bottom: 20px;
+  
+  margin-top: 20px;
+  border-bottom: 2px solid grey;
+}
+
+.progress-text {
+  padding-left: 16px;
+}
+.trancate{
+  white-space: nowrap; 
+  width: 50px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  border: 1px solid #000000;
+   
+}

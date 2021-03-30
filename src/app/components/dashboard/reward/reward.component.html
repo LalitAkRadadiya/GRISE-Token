@@ -1,0 +1,86 @@
+
+<div style="background-color: rgb(59, 65, 72); height: 100%;">
+       
+      <div  class="personal">
+        <!-- <img style="width: 250px" src="../../../assets/logo.png"> -->
+        <i class="fas fa-crown personal_icon"></i>
+        <h1 class="personal_title">Token Holder Reward</h1>
+      </div>
+      <div class="sub-end-part">
+      
+          <!-- <div style=" border-bottom: 2px solid grey;margin-bottom: 40px;"></div> -->
+          <div class="row main" >
+              <div class="tab">
+              
+                  <h4 class="tab-header">
+                  Your Transaction Fee Reward Amount
+                  </h4>
+                  <div class="timebox">
+                        <!-- <i class="fab fa-bandcamp" style="font-size: 30px;color: white"></i> -->
+                        <button class="ether">
+                            <!-- <i class="fab fa-ethereum" style="font-size: 30px"></i> -->
+                            <img src="../assets/logo-black.png" alt="logo" style="height: 30px; width: 30px;">
+                        </button>
+                        
+                        <span class="digit">{{ (rewardToken ? rewardToken : 0) | number:'1.0-2' }} Grise Tokens</span>
+                  </div>
+              </div>
+              <div style="width:2%"></div>
+              <div class="tab">
+                  <h4 class="tab-header">
+                    Total Days left to claim Reward
+                    <span class="tooltip-question" mat-raised-button #tooltip="matTooltip"
+                      matTooltip="Token holder reward can be claimed at every 7th day of week."
+                      matTooltipPosition="below"><i class="fas fa-question-circle"></i></span>
+                  </h4>
+                  <div class="timebox">
+                      <button class="ether">
+                          <i class="fas fa-calendar-alt"  style="font-size: 30px;" aria-hidden="true"></i>
+                      </button>
+                      
+                      <span class="digit">
+                          <!-- <countdown [config]="{leftTime: 3444440}"></countdown> -->
+                          
+                        <span style="color: white" id="tokentimer1">{{ daysLeft }} Days Left</span>                        
+                      </span>
+                  </div>
+                  
+              </div>
+          </div>
+        
+          
+          <br>
+          <br>
+          <button type="button" [disabled]="daysLeft == 0 && rewardToken != 0 ? null : 'disabled'" class="btn btn-primary staking_button" (click)="claimReward()">Claim Reward</button>
+          <footer>
+            <div class="grise">
+              
+              <!-- <img style="width: 250px" src="../../../assets/logo.png"> -->
+            </div>
+          </footer>
+       
+
+
+      </div>
+</div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

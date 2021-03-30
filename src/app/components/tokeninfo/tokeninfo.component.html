@@ -1,0 +1,395 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="container-fluid bg-color">
+
+    <div class="row content">
+
+        <div class="col-lg-3 tokeninfo-first">
+            <div style="display: grid;">
+
+                <button type="button" class="btn btn-primary tab-button all_button" routerLink="../home"
+                    queryParamsHandling="merge" style="margin-top: 25%"> Home </button>
+
+                <button type="button" class="btn btn-primary tab-button all_button" fragment="Overview"
+                    (click)="navigateToSection('Overview')">Overview</button>
+                <button type="button" class="btn btn-primary tab-button all_button" fragment="Inflation"
+                    (click)="navigateToSection('Inflation')">Inflation</button>
+                <button type="button" class="btn btn-primary tab-button all_button" fragment="use_defi"
+                    (click)="navigateToSection('use_defi')">Use Defi Tokens </button>
+
+                <button type="button" class="btn btn-primary tab-button all_button" fragment="smart"
+                    (click)="navigateToSection('smart')">Smart Contract</button>
+                <button type="button" class="btn btn-primary tab-button all_button" fragment="fee_structure"
+                    (click)="navigateToSection('fee_structure')">Fee Structure</button>
+                <button type="button" class="btn btn-primary tab-button all_button" fragment="team"
+                    (click)="navigateToSection('team')">Team</button>
+            </div>
+
+
+        </div>
+        <div class="col-lg-12 tokeninfo-second" id="Overview">
+            <div class="personal">
+                <!-- <img style="width: 250px" src="../../../assets/logo.png"> -->
+                <!-- <i class="fas fa-coins"></i> -->
+                <h1 class="personal_title">Token Info</h1>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div style="text-align: center">
+                <div class="grise">
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div style="text-align: center">
+                <div>
+                    <h1 class="title">Grise Overview</h1>
+                </div>
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+                            role="tab" aria-controls="nav-home" aria-selected="true" style="width: 33%">HOW GRISE
+                            WORKS</a>
+                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                            role="tab" aria-controls="nav-profile" aria-selected="false" style="width: 33%"> All
+                            PRE-SALE PROBLEMS SOLVED</a>
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                            role="tab" aria-controls="nav-contact" aria-selected="false" style="width: 33%">PROMTE GRiSE
+                            FOR MORE REWARDS</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="second" style="display: flex; ">
+                            <div class="subbox" style="width: 33%"><br>
+                                <div class="logo"><i class="fa fa-adjust" aria-hidden="true"></i></div>
+                                <span>Reserve Grise</span>
+                                <p style="margin: 20px">
+                                    GRISE will have a 200 hour launch period for participants to reserve GRISE. Every 4
+                                    hours (except for extreme slots) there are 6,000 grise available, which will be
+                                    distributed proportionately according to total Ethereum sent during that time slot.
+                                </p>
+                            </div>
+                            <div class="subbox" style="width: 33%"><br>
+                                <div class="logo"><i class="fa fa-adjust" aria-hidden="true"></i></div>
+                                <span>Stake GRISE</span>
+                                <p style="margin: 20px">
+                                    Lock up Grise, to earn rewards. Rewards are distributed from inflation and
+                                    transactional fees. Reduce or avoid any transactional fees by staking. Mid term and
+                                    long term term stakers will benefit more from any future developments, until admin
+                                    keys are burned. </p>
+                            </div>
+                            <div class="subbox" style="width: 33%"><br>
+                                <div class="logo"><i class="fa fa-adjust" aria-hidden="true"></i></div>
+                                <span>Earn Rewards- Sell GRISE</span>
+                                <p style="margin: 20px">
+                                    Your reward will directly go to your wallet, which you can claim. You can cash out
+                                    your grise without any fees after your staking period. grise is designed to create a
+                                    massive liquidity pool on Uniswap, and ability to swap from your private wallet on
+                                    uniswap or grise website. </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="second" style="display: flex; ">
+                            <div class="subbox" style="width: 33%"><br>
+                                <div class="logo"><i class="fa fa-adjust" aria-hidden="true"></i></div>
+                                <span>Security</span>
+                                <p style="margin: 20px">
+                                    Once we burn the key the contract is unchangeable. It is made by a team of 4
+                                    developers that tested the code every step of the way. Investors can have a peace of
+                                    mind knowing that the contract will do what it says it will do. And cannot be
+                                    changed. Even the staking is performed from the safety of your own private wallet.
+                                </p>
+                            </div>
+                            <div class="subbox" style="width: 33%"><br>
+                                <div class="logo"><i class="fa fa-adjust" aria-hidden="true"></i></div>
+                                <span>Decentralized</span>
+                                <p style="margin: 20px">
+                                    griseis made of immutable smart contract with rigorous testing. The presale contract
+                                    will send 91% of the launch money to Uniswap, this will create create a giant
+                                    liquidity pool for trading. The contract is deigned to send liquidity, without any
+                                    middlemen or central parties. At launch of the sale contract grise founders will be
+                                    on the same level of playing field as all the investors.
+                                </p>
+                            </div>
+                            <div class="subbox" style="width: 33%"><br>
+                                <div class="logo"><i class="fa fa-adjust" aria-hidden="true"></i></div>
+                                <span>Scalable</span>
+                                <p style="margin: 20px">
+                                    They problem with short lived projects is that there model is not Scalable. Grise
+                                    tokenomics are designed to do one thing and that is to scale the project upwards, in
+                                    a better and more profitable way than any other project in the market. The way
+                                    everything is structured in the contract is for unlimited growth.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <div class="second" style="display: flex; ">
+                            <div class="subbox" style="width: 33%"><br>
+                                <div class="logo"><i class="fa fa-adjust" aria-hidden="true"></i></div>
+                                <span>Pre-launch Phase</span>
+                                <p style="margin: 20px">
+                                    You can use referral link provided to get a small bonus. You will get a 5 percent
+                                    bonus for referring 1 eth and above. If the referrals contribution is above 20 eth
+                                    you get a 10 percent bonus. Both you and the person you refer are eligible for the
+                                    reward.
+                                </p>
+                            </div>
+                            <div class="subbox" style="width: 33%"><br>
+                                <div class="logo"><i class="fa fa-adjust" aria-hidden="true"></i></div>
+                                <span>Launch Phase</span>
+                                <p style="margin: 20px">
+                                    Any one who refers 20 eth or more during launch will receive a 10 percent bonus. If
+                                    the contribution amount is less than 20 eth the bonus will be 5 percent. These
+                                    commissions will be available immediately after the launch to stake or swap for eth
+                                    on uniswap.
+                                </p>
+                            </div>
+                            <div class="subbox" style="width: 33%"><br>
+                                <div class="logo"><i class="fa fa-adjust" aria-hidden="true"></i></div>
+                                <span>Post Launch phase</span>
+                                <p style="margin: 20px">
+                                    THere will be no rewards post launch
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="smart"><br><br><br></div>
+                </div>
+                <!-- <mat-tab-group>
+                        <mat-tab label="HOW GRISE WORKS"> 
+                                    
+                            <p>first</p>
+                        </mat-tab>
+                        <mat-tab label="All PRE-SALE PROBLEMS SOLVED">  
+                                                        
+                                    <p>second</p>                            
+                        </mat-tab>
+                        <mat-tab label="PROMTE GRiSE FOR MORE REWARDS">  
+                                
+                                     <p>third</p>   
+
+                        </mat-tab>
+                </mat-tab-group>      -->
+                <div class="third" id="smart" style="margin: 50px">
+                    <div>
+                        <h1 class="info_title">Grise Smart Contracts</h1>
+                        <p class="smart">
+                            Grise project is designed with several contacts that work together to capitalize and grow
+                            in a sustainable, safe way but at a faster rate than any other system that exists.
+                            Phase one of Grise token mechanism will happen in the following manner
+
+                        </p>
+                    </div>
+
+                    <div style="display: flex">
+                        <div style="width: 50%">
+                            <div class="subbox">
+                                <div class="logo"><i class="fa fa-adjust" aria-hidden="true"></i></div>
+                                <span>Launch event</span>
+                                <p style="margin: 20px">
+                                    The launch contract will create 50 slots that will be 4 hours long. During this
+                                    phase users can send ETH or any other defi token to the contract to reserve grise
+                                    for the Main liquidity pool.
+                                </p>
+                            </div>
+                        </div>
+                        <div style="width: 50%">
+                            <div class="subbox">
+                                <div class="logo"><i class="fa fa-adjust" aria-hidden="true"></i></div>
+                                <span>Circulation Event</span>
+                                <p style="margin: 20px">
+                                    This is the time when all the 50 slots are over. No further reservation can be made.
+                                    Reserved grise and all the referral bonus can be claimed by the user and users can
+                                    begin staking.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h1 class="info_title" id="last">Liquidity transformer</h1>
+
+                        <p style="margin: 20px">
+                            Liquidity transformer is a Smart Contract that can trustlessly generate the main liquidity
+                            pool for grise using Uniswap protocol. grise tokens are minted for investors who make
+                            reservation during reservation phase. After the reservation phase is over, users can claim
+                            these tokens. And equal amount of minted Tokens created for all users are paired with raised
+                            ethereum and sent to Uniswap. This liquidity backs up the value of grise tokens.
+                        </p>
+                        <div id="fee_structure"><br><br></div>
+                        <div class="liquidity">
+                            <div style="width: 100%">
+                                <button type="button" class="btn btn-primary content_button all_button">Check Smart
+                                    Contract</button>
+                            </div>
+                            <!-- <div style="width: 50%"> -->
+                            <!-- <button type="button" class="btn btn-primary button">   Uniswap</button> -->
+                            <!-- </div> -->
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="fourth">
+                    <div>
+                        <h1 class="info_title">Grise Contract Fees structure</h1>
+                        <p style="margin: 20px">
+                            The Grise token fees structure and rewards are designed to do the following, in sequence of
+                            importance:
+                            ---First to make sure that as time passes the system becomes more and more robust
+                            ---Second, to give the most possible benefit to the stakers, without compromising the
+                            system.
+                            ---Third, ensure they system gets built on in the future.
+                            ---Every token holder gets a residual benefit for being part of the system
+                        </p>
+                    </div>
+                </div>
+                <div class="fifth">
+                    <h1 class="info_title">Transactional Fees, Contact cancellation fee structure</h1>
+                    <div style="display: flex">
+                        <div style="width: 50%">
+                            <p style="margin: 20px;min-height: 320px;text-align: justify">The contract will incur a
+                                transaction fees of 3.47% on the sell side of the transaction. Sell side fees can be
+                                eliminated or reduced if you stake your tokens for any amount of time.
+
+                                ----1.06% goes to a reservoir.
+                                ----.91% goes to all token holders and stakers in the form of grise token.(can be
+                                scraped weekly for stakers)(for token holder there will be a screenshot weekly after
+                                which the rewards will be available to claim for a day-if un claimed tokens will be
+                                burned)
+                                ----.57% more goes to medium term and long term stakers in the form of grise token.(can
+                                be scraped weekly)
+                                ----.5% goes for operation and future development.
+                                ----.43% goes to a burn address
+
+                                BUY Side fees--- .30%,---- .25% goes to liquidity and .05 goes for operation and future
+                                development.
+                            </p>
+                            <div style="display: flex">
+                                <div style="width: 100%">
+                                    <button type="button" style="white-space: normal;"
+                                        class="btn btn-primary content_button all_button">See complete Grise token
+                                        Mecanism: Document</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div style="width: 50%">
+                            <p style="margin: 20px;min-height: 320px;text-align: justify">If a staking contract is
+                                broken there will be 13% fees for breaking the contract.
+
+                                •The penalty will work on a sliding scale.
+                                A. Example: If you are a short term staker and you broke your contract on the first day
+                                of your weekly stake you will be penalized 17 %. During the last day you will be
+                                penalized 0%
+                                B.If you are a long or mid term staker. And break your contract on the first day it will
+                                cost you 17%. On your last day it will cost you 0%.
+                                • Penalty fee distribution structure.
+                                A. 34.27% goes to a reservoir.
+                                B.27.81% percent will be distributed in the form of grise token to all mid-term and long
+                                term stakers stakers.
+                                C.12.81% will be distributed to all token holders and stakers in grise token form .
+                                D.12.00% will go for operational expenses.
+                                E.8.11% will be distributed to all the weekly stakers in the form of grise token.
+                                F.5% will go to a burn address.
+
+                            </p>
+                            <div style="display: flex" id="Inflation">
+
+                                <div style="width: 100%">
+                                    <button type="button" style="white-space: normal;"
+                                        class="btn btn-primary content_button all_button"> See complete Grise token
+                                        Mecanism: Document</button>
+                                </div>
+
+                                <br>
+                                <br>
+                                <br><br>
+                                <br>
+                                <br>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="sixth">
+                    <h1 class="info_title">Inflation</h1>
+                    <p style="margin: 20px" id="use_defi">grise token has an inflation rate of 6% per year.
+                        A. 70% inflation goes to medium term stakers and long term stakers.
+                        B. 30% inflation is given all token holders distributed weekly (tokens in lp excluded).
+                        <br>
+                        <br>
+                        <br>
+                    </p>
+                </div>
+                <div class="sixth_second">
+                    <h1 class="info_title">Use DeFI Tokens for GRISE Reservation</h1>
+                    <p style="margin: 20px">
+                        grise Liquidity Transformer will be able to accept varios tokens and convert them through
+                        Uniswap into ETH for grise reservation
+                    </p>
+                </div>
+
+                <div class="seven">
+
+                    <h1 class="info_title">Referral system</h1>
+                    <p style="margin: 20px">
+                        grise contract has a direct, one level referral system that rewards both the referrer and
+                        referee when a user reserves grise
+                    </p>
+
+                    <button type="button" class="btn btn-primary link all_button" (click)="openReferralLinkDialog()">
+                        Create Grise Tokens Referral Link
+                    </button>
+
+                </div>
+                <div class="eight" id="team">
+                    <h1 class="info_title">
+                        Grise Team and Vision
+                    </h1>
+                    <p style="margin: 20px">
+                        Our teams motivation and goals for this project can be summarized in 3 points.
+                        ----First to create a very robust system that becomes more robust with time.
+                        ----Secondly, make sure almost all the benefits go back to the contributors in proportion to
+                        their commitment to the project.
+                        ----Lastly, ensure the product gets built on-- we are excited for the future.
+
+                        To support our vision we conceptualized the project in December of 2020 and started working on
+                        it in January 2021.
+                        Our team consists of 3 expert developers working with a marketing team. We welcome you in our
+                        vision for the future.
+
+                    </p>
+                </div>
+
+
+            </div>
+            <div class="line-splitter"></div>
+            <div class="footer">
+                <div class="grise">
+                    <!-- <img style="width: 250px" src="../../../assets/logo.png"> -->
+                  <span>
+                    Copyright © 2021–2022 — Grise, LLC<br>
+                    ALL RIGHTS RESERVED
+                  </span>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>

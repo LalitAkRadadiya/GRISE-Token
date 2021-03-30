@@ -1,0 +1,64 @@
+<div style="background-color: rgb(59, 65, 72);">
+
+  <div class="personal">
+    <!-- <img style="width: 250px" src="../../../assets/logo.png"> -->
+    <i class="fas fa-gas-pump personal_icon"></i>
+    <h1 class="personal_title">Gas Refund</h1>
+  </div>
+
+  <div class="sub-end-part">
+    <!-- <div style=" border-bottom: 2px solid grey;margin-bottom: 40px;"></div> -->
+    <div class="row maintab">
+      <div class="tab">
+
+        <h4 style="margin: 30px;text-transform: uppercase;">
+
+          TOTAL ETH AVAILABLE IN GAS REFUND CONTRACT
+
+        </h4>
+        <div class="timebox">
+          <span class="value">
+            <button class="ether">
+              <i class="fab fa-ethereum" style="font-size: 30px"></i>
+            </button>
+            <span class="digit">{{ refundHistoryData?.sponsoredAmount | number:'1.0-5' }} ETH</span>
+          </span>
+        </div>
+      </div>
+      <div style="width:2%"></div>
+      <div class="tab">
+        <h4 style=" margin: 30PX; text-transform: uppercase;">
+
+          CURRENT ETH AMOUNT YOU CAN CLAIM
+
+        </h4>
+        <div class="timebox">
+          <span class="value">
+            <button class="ether">
+              <i class="fab fa-ethereum" style="font-size: 30px"></i>
+            </button>
+            <span class="digit">{{ refundHistoryData?.myRefundAmount | number:'1.0-5' }} ETH</span>
+          </span>
+        </div>
+        <h4 style=" margin: 30PX; text-transform:initial">
+          Based on first 200 transactions
+        </h4>
+
+      </div>
+
+
+    </div>
+    <!-- <div>hi</div>
+          <div style="display: flex; margin-left: 2%; color: floralwhite;">
+              <h3 >YOUR TRANSACTIONS</h3>
+          </div> -->
+    <!-- <h5 "> -->
+    <br>
+    <br>
+    <button type="button" [disabled]="refundHistoryData && refundHistoryData.myRefundAmount > 0 ? null : 'disabled'" class="btn btn-primary tab-button" (click)="claimGasFeeRefund()">Cliam
+      your Gas Fee Refund</button>
+    <!-- </h5> -->
+
+  </div>
+
+</div>

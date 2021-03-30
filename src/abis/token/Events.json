@@ -1,0 +1,347 @@
+{
+  "contractName": "Events",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "tokenHolderAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "griseWeek",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "claimedAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "TranscFeeClaimed",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"tokenHolderAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"griseWeek\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"claimedAmount\",\"type\":\"uint256\"}],\"name\":\"TranscFeeClaimed\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/Dhaval/eth/grise/src/contracts/Events.sol\":\"Events\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Dhaval/eth/grise/src/contracts/Events.sol\":{\"keccak256\":\"0xe81ff8d72dbe7d513863f217fa7442edc56229a93bd86eee0ac83ed553d00e66\",\"license\":\"--\",\"urls\":[\"bzz-raw://c873dad7c5c9ded7417f0bba411080a40eb9a69d02832ff18373b1af99eb466e\",\"dweb:/ipfs/QmPPwZSQ7E3ii65mJeYAEoVgxqT8wWU7gPyBRYNqsKXGZL\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea264697066735822122049c4c314f1471d1750ccb3075e63a683078253427d5d995250e83f409e61670b64736f6c63430007060033",
+  "deployedBytecode": "0x6080604052600080fdfea264697066735822122049c4c314f1471d1750ccb3075e63a683078253427d5d995250e83f409e61670b64736f6c63430007060033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "67:163:2:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "67:163:2:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: --🦉--\r\n\r\npragma solidity =0.7.6;\r\n\r\ncontract Events {\r\n\r\n    event TranscFeeClaimed(\r\n        address indexed tokenHolderAddress,\r\n        uint256 griseWeek,\r\n        uint256 claimedAmount\r\n    );\r\n}",
+  "sourcePath": "C:\\Users\\Dhaval\\eth\\grise\\src\\contracts\\Events.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Dhaval/eth/grise/src/contracts/Events.sol",
+    "exportedSymbols": {
+      "Events": [
+        173
+      ]
+    },
+    "id": 174,
+    "license": "--",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 164,
+        "literals": [
+          "solidity",
+          "=",
+          "0.7",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:23:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 173,
+        "linearizedBaseContracts": [
+          173
+        ],
+        "name": "Events",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 172,
+            "name": "TranscFeeClaimed",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 171,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 166,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tokenHolderAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "125:34:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 165,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "125:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 168,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "griseWeek",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "170:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 167,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "170:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 170,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "claimedAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "198:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 169,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "198:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "114:112:2"
+            },
+            "src": "92:135:2"
+          }
+        ],
+        "scope": 174,
+        "src": "67:163:2"
+      }
+    ],
+    "src": "40:190:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/Dhaval/eth/grise/src/contracts/Events.sol",
+      "exportedSymbols": {
+        "Events": [
+          173
+        ]
+      },
+      "license": "--"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "=",
+            "0.7",
+            ".6"
+          ]
+        },
+        "id": 164,
+        "name": "PragmaDirective",
+        "src": "40:23:2"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            173
+          ],
+          "name": "Events",
+          "scope": 174
+        },
+        "children": [
+          {
+            "attributes": {
+              "anonymous": false,
+              "name": "TranscFeeClaimed"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "mutability": "mutable",
+                      "name": "tokenHolderAddress",
+                      "scope": 172,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 165,
+                        "name": "ElementaryTypeName",
+                        "src": "125:7:2"
+                      }
+                    ],
+                    "id": 166,
+                    "name": "VariableDeclaration",
+                    "src": "125:34:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "griseWeek",
+                      "scope": 172,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 167,
+                        "name": "ElementaryTypeName",
+                        "src": "170:7:2"
+                      }
+                    ],
+                    "id": 168,
+                    "name": "VariableDeclaration",
+                    "src": "170:17:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "claimedAmount",
+                      "scope": 172,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 169,
+                        "name": "ElementaryTypeName",
+                        "src": "198:7:2"
+                      }
+                    ],
+                    "id": 170,
+                    "name": "VariableDeclaration",
+                    "src": "198:21:2"
+                  }
+                ],
+                "id": 171,
+                "name": "ParameterList",
+                "src": "114:112:2"
+              }
+            ],
+            "id": 172,
+            "name": "EventDefinition",
+            "src": "92:135:2"
+          }
+        ],
+        "id": 173,
+        "name": "ContractDefinition",
+        "src": "67:163:2"
+      }
+    ],
+    "id": 174,
+    "name": "SourceUnit",
+    "src": "40:190:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-03-12T13:39:05.395Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

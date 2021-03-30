@@ -1,0 +1,200 @@
+.button {
+  margin: 10px;
+  padding: 0 20px;
+  color: white;
+  background: linear-gradient(89.02deg, #6226D9 0.89%, #8C52FF 100%) !important;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.dropdown_button {
+  // margin: 10px;
+  width: 120px;
+  color: black;
+  background: white !important;
+  // border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+.Eth__button {
+  background-color: Transparent;
+  border: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+.reservation-button {
+  background-color: #6610f2;
+  width: 90%;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.focus {
+  background-color: #6226D9;
+  border-color: none;
+}
+
+.main {
+  padding: 5px
+}
+
+.snd {
+  font-size: 20px;
+}
+
+.reservation-button {
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  width: 87%;
+  border-radius: 7px;
+}
+
+.cell {
+  border-radius: 25px;
+  color: #fff;
+  box-shadow: 19px 7px 68px #696a69;
+
+}
+
+.time {
+  color: #fff;
+  font-size: 16px
+}
+
+.time:hover {
+  cursor: auto;
+  color: white;
+}
+
+.ether {
+  background-color: #e7e7e7;
+  height: 33px;
+  width: 35px;
+  margin-right: 15px;
+  color: black;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 8px 8px 8px black;
+  // padding-right: 30px;
+}
+
+.progress {
+  height: 12px;
+  width: 90%;
+  margin-left: 5%;
+
+}
+
+.progress-bar {
+  background-color: #6226D9;
+}
+
+.hover {
+  text-align: center;
+  margin: 12px;
+}
+
+.section {
+  width: 50%;
+  text-align: center
+}
+
+.product_item {
+  background-color: #46494f;
+}
+
+.product_item:hover {
+  background-color: #56595f;
+}
+
+
+
+
+
+.bar-pro {
+  border-bottom: 1px solid grey;
+  margin: 20px 0px;
+}
+
+h4 {
+  margin-bottom: 0px;
+}
+
+.line {
+
+  height: 40px;
+  border-right: 1px solid gray;
+}
+
+.reservation-button {
+  margin-top: 5%;
+}
+
+.price {
+  padding-bottom: 20px
+}
+
+.vertical-divider {
+  position: absolute;
+  display: table;
+  text-align: center;
+  height: 90%; // CHANGE ME!
+  width: 100%;
+  padding-bottom: 10px;
+
+  .center-element {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      left: 50%;
+      border-left: 2px solid #dfdfdf;
+    }
+
+    &:before {
+      bottom: 50%;
+      top: 0;
+      margin-bottom: 20px;
+    }
+
+    &:after {
+      top: 50%;
+      bottom: 0;
+      margin-top: 20px;
+    }
+  }
+}
+
+.not_selected {
+  background-color: #46494f;
+}
+
+.selected {
+  background-color: #8C52FF;
+}

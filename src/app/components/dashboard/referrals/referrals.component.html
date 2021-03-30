@@ -1,0 +1,50 @@
+<div style="background-color: rgb(59, 65, 72);">
+
+
+  <div class="personal">
+    <i class="fas fa-user-friends personal_icon"></i>
+    <h1 class="personal_title">Personal Referrals</h1>
+
+  </div>
+
+  <div class="sub-end-part">
+    <div style="display: flex; margin-left: 5% ; color: floralwhite;">
+    </div>
+    <div>
+
+
+      <div class="main">
+        <div class="first timebox">
+          <span style="padding-left:10%">
+            <h1 style="color: white">
+              Referral Amount :
+              {{personalReferralData?.referralAmount | number:'1.0-5'}} ETH
+              <!-- {{accountNo}} -->
+            </h1>
+          </span>
+        </div>
+
+
+
+        <div style="width:2%"></div>
+
+        <div class="second timebox">
+          <span style="padding-left:10%">
+            <h1 style="color: white">
+              Rewards  
+              <span class="tooltip-question" mat-raised-button #tooltip="matTooltip"
+                      matTooltip="Reward will be calculated after liquidity event."
+                      matTooltipPosition="below"><i class="fas fa-question-circle" style="font-size: 16px;"></i></span> 
+              
+              :
+              {{personalReferralData?.referralTokens | number:'1.0-2'}} Grise
+            </h1>
+          </span>
+        </div>
+      </div>
+
+
+     
+    </div>
+
+  </div>

@@ -1,0 +1,122 @@
+.box_lable {
+  box-sizing: border-box;
+  box-shadow: 19px 7px 68px #292a29;
+  margin: 2px;
+  border-radius: 30px;
+  height: 80px;
+
+}
+span{
+  line-height: 25px;
+}
+
+.ether {
+  background-color: white;
+  height: 45px;
+  width: 45px;
+  color: black;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 8px 8px 8px black;
+  // padding-right: 30px;
+}
+
+.digit {
+  margin-left: 30px;
+  padding-top: 3%;
+}
+
+
+.timebox {
+  text-align: left;
+  padding-left: 10px;
+  display: flex;
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+  height: 100px;
+  margin: 0 20px;
+}
+
+.grise {
+  color: #f1f1f1;
+}
+
+
+
+p,
+h4 {
+  color: #f1f1f1;
+}
+
+
+.tab {
+  width: 49%;
+  text-align: left;
+  border-radius: 30px;
+  box-shadow: 19px 7px 68px #292a29;
+}
+
+.tab-header {
+  margin: 30px;
+  text-transform: uppercase;
+}
+
+.blink {
+  border-right-style: solid;
+  animation: 1s blink infinity;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+.staking_button {
+  background: linear-gradient(89.02deg, #6226D9 0.89%, #8C52FF 100%) !important;
+  margin: 10px;
+  outline: none;
+  height: 40px;
+  border-radius: 10px;
+  width: 270px;
+  margin-bottom: 30px;
+}
+
+@media(max-width:992px) {
+  .timebox {
+    padding-left: 20%;
+  }
+
+  .maintab {
+    display: inline;
+  }
+
+  .tab {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+
+}
+
+h4 {
+  margin: 16px;
+}
+
+.box {
+  color: white;
+  padding: 8px;
+  font-size: 30px;
+}
+
+.lable {
+  margin: 0px;
+}
+
+.tooltip-question {
+  margin-left: 3px;
+  font-size: 13px;
+  vertical-align: bottom;
+}

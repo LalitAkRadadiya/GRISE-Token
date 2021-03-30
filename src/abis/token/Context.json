@@ -1,0 +1,624 @@
+{
+  "contractName": "Context",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/Dhaval/eth/grise/src/contracts/Context.sol\":\"Context\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Dhaval/eth/grise/src/contracts/Context.sol\":{\"keccak256\":\"0x8ecc1bc837beed99e1ed4db093b9013a32cf4b1d0fff8db1a1361e296506dc68\",\"license\":\"--\",\"urls\":[\"bzz-raw://cf7b7da4c4157a639e2c25363782a8c03f7921414fce41e15b3a20dd4c86745a\",\"dweb:/ipfs/QmPDQxKhYhsxaXHqQ29Jxnkc9TEkYD3Lb17eDJVF5HrT9v\"]},\"/C/Users/Dhaval/eth/grise/src/contracts/SafeMath.sol\":{\"keccak256\":\"0xd3ea0438fb7fa155543f9ed4cae7dc86ed0d5997fe7f3b71a7ad18b3caadd233\",\"license\":\"--\",\"urls\":[\"bzz-raw://5bf3eb53f293b54fa951ee5ac64267997025ac7b4d99981ba95a8df9ba2eaafa\",\"dweb:/ipfs/QmbxS5LM7UVQ3oKZMXWoTKpNk13bRn2pqziSGCmzfXsEZA\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220ae69a88fd2b465016cb4337a51b8a97400e587745cdcff6daf52ba6a621ee5b964736f6c63430007060033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220ae69a88fd2b465016cb4337a51b8a97400e587745cdcff6daf52ba6a621ee5b964736f6c63430007060033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "67:392:0:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "67:392:0:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: --🦉--\r\n\r\npragma solidity =0.7.6;\r\n\r\ncontract Context {\r\n\r\n    /**\r\n     * @dev returns address executing the method\r\n     */\r\n    function _msgSender() internal view virtual returns (address payable) {\r\n        return msg.sender;\r\n    }\r\n\r\n    /**\r\n     * @dev returns data passed into the method\r\n     */\r\n    function _msgData() internal view virtual returns (bytes memory) {\r\n        this;\r\n        return msg.data;\r\n    }\r\n}\r\n\r\nimport \"./SafeMath.sol\";",
+  "sourcePath": "C:\\Users\\Dhaval\\eth\\grise\\src\\contracts\\Context.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Dhaval/eth/grise/src/contracts/Context.sol",
+    "exportedSymbols": {
+      "Context": [
+        24
+      ],
+      "SafeMath": [
+        1598
+      ]
+    },
+    "id": 26,
+    "license": "--",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "=",
+          "0.7",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:23:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 24,
+        "linearizedBaseContracts": [
+          24
+        ],
+        "name": "Context",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 10,
+              "nodeType": "Block",
+              "src": "231:36:0",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "id": 7,
+                      "name": "msg",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4294967281,
+                      "src": "249:3:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_message",
+                        "typeString": "msg"
+                      }
+                    },
+                    "id": 8,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "sender",
+                    "nodeType": "MemberAccess",
+                    "src": "249:10:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "functionReturnParameters": 6,
+                  "id": 9,
+                  "nodeType": "Return",
+                  "src": "242:17:0"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2,
+              "nodeType": "StructuredDocumentation",
+              "src": "93:62:0",
+              "text": " @dev returns address executing the method"
+            },
+            "id": 11,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_msgSender",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "180:2:0"
+            },
+            "returnParameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11,
+                  "src": "214:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 4,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "214:15:0",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "213:17:0"
+            },
+            "scope": 24,
+            "src": "161:106:0",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 22,
+              "nodeType": "Block",
+              "src": "407:49:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 17,
+                    "name": "this",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 4294967268,
+                    "src": "418:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Context_$24",
+                      "typeString": "contract Context"
+                    }
+                  },
+                  "id": 18,
+                  "nodeType": "ExpressionStatement",
+                  "src": "418:4:0"
+                },
+                {
+                  "expression": {
+                    "expression": {
+                      "id": 19,
+                      "name": "msg",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4294967281,
+                      "src": "440:3:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_message",
+                        "typeString": "msg"
+                      }
+                    },
+                    "id": 20,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "data",
+                    "nodeType": "MemberAccess",
+                    "src": "440:8:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_calldata_ptr",
+                      "typeString": "bytes calldata"
+                    }
+                  },
+                  "functionReturnParameters": 16,
+                  "id": 21,
+                  "nodeType": "Return",
+                  "src": "433:15:0"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 12,
+              "nodeType": "StructuredDocumentation",
+              "src": "275:61:0",
+              "text": " @dev returns data passed into the method"
+            },
+            "id": 23,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_msgData",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "359:2:0"
+            },
+            "returnParameters": {
+              "id": 16,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 23,
+                  "src": "393:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 14,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "393:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "392:14:0"
+            },
+            "scope": 24,
+            "src": "342:114:0",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 26,
+        "src": "67:392:0"
+      },
+      {
+        "absolutePath": "/C/Users/Dhaval/eth/grise/src/contracts/SafeMath.sol",
+        "file": "./SafeMath.sol",
+        "id": 25,
+        "nodeType": "ImportDirective",
+        "scope": 26,
+        "sourceUnit": 1599,
+        "src": "463:24:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      }
+    ],
+    "src": "40:447:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/Dhaval/eth/grise/src/contracts/Context.sol",
+      "exportedSymbols": {
+        "Context": [
+          24
+        ],
+        "SafeMath": [
+          1598
+        ]
+      },
+      "license": "--"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "=",
+            "0.7",
+            ".6"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "40:23:0"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            24
+          ],
+          "name": "Context",
+          "scope": 26
+        },
+        "children": [
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_msgSender",
+              "scope": 24,
+              "stateMutability": "view",
+              "virtual": true,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev returns address executing the method"
+                },
+                "id": 2,
+                "name": "StructuredDocumentation",
+                "src": "93:62:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3,
+                "name": "ParameterList",
+                "src": "180:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 11,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address payable",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "payable",
+                          "type": "address payable"
+                        },
+                        "id": 4,
+                        "name": "ElementaryTypeName",
+                        "src": "214:15:0"
+                      }
+                    ],
+                    "id": 5,
+                    "name": "VariableDeclaration",
+                    "src": "214:15:0"
+                  }
+                ],
+                "id": 6,
+                "name": "ParameterList",
+                "src": "213:17:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 6
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "sender",
+                          "type": "address payable"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4294967281,
+                              "type": "msg",
+                              "value": "msg"
+                            },
+                            "id": 7,
+                            "name": "Identifier",
+                            "src": "249:3:0"
+                          }
+                        ],
+                        "id": 8,
+                        "name": "MemberAccess",
+                        "src": "249:10:0"
+                      }
+                    ],
+                    "id": 9,
+                    "name": "Return",
+                    "src": "242:17:0"
+                  }
+                ],
+                "id": 10,
+                "name": "Block",
+                "src": "231:36:0"
+              }
+            ],
+            "id": 11,
+            "name": "FunctionDefinition",
+            "src": "161:106:0"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_msgData",
+              "scope": 24,
+              "stateMutability": "view",
+              "virtual": true,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev returns data passed into the method"
+                },
+                "id": 12,
+                "name": "StructuredDocumentation",
+                "src": "275:61:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 13,
+                "name": "ParameterList",
+                "src": "359:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 23,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "bytes",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 14,
+                        "name": "ElementaryTypeName",
+                        "src": "393:5:0"
+                      }
+                    ],
+                    "id": 15,
+                    "name": "VariableDeclaration",
+                    "src": "393:12:0"
+                  }
+                ],
+                "id": 16,
+                "name": "ParameterList",
+                "src": "392:14:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 4294967268,
+                          "type": "contract Context",
+                          "value": "this"
+                        },
+                        "id": 17,
+                        "name": "Identifier",
+                        "src": "418:4:0"
+                      }
+                    ],
+                    "id": 18,
+                    "name": "ExpressionStatement",
+                    "src": "418:4:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 16
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "data",
+                          "type": "bytes calldata"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4294967281,
+                              "type": "msg",
+                              "value": "msg"
+                            },
+                            "id": 19,
+                            "name": "Identifier",
+                            "src": "440:3:0"
+                          }
+                        ],
+                        "id": 20,
+                        "name": "MemberAccess",
+                        "src": "440:8:0"
+                      }
+                    ],
+                    "id": 21,
+                    "name": "Return",
+                    "src": "433:15:0"
+                  }
+                ],
+                "id": 22,
+                "name": "Block",
+                "src": "407:49:0"
+              }
+            ],
+            "id": 23,
+            "name": "FunctionDefinition",
+            "src": "342:114:0"
+          }
+        ],
+        "id": 24,
+        "name": "ContractDefinition",
+        "src": "67:392:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1599,
+          "absolutePath": "/C/Users/Dhaval/eth/grise/src/contracts/SafeMath.sol",
+          "file": "./SafeMath.sol",
+          "scope": 26,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 25,
+        "name": "ImportDirective",
+        "src": "463:24:0"
+      }
+    ],
+    "id": 26,
+    "name": "SourceUnit",
+    "src": "40:447:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-03-12T13:39:05.384Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

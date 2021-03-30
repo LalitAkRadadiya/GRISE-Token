@@ -1,0 +1,60 @@
+.grise{
+    color :#f1f1f1;
+  }
+  .grise::first-letter {
+    font-size: 200%;
+    color: #6610f2;
+  }
+  label{
+      color: #f1f1f1;
+  }
+  
+  
+  .main{
+    display: flex;
+  }
+  @media(max-width:992px){
+  
+    .main{
+      display: inline;
+    }
+
+  }
+
+
+.timebox{
+  box-shadow: 19px 7px 68px #292a29; 
+  border-radius: 30px;
+}
+
+.tooltip-question {
+  margin-left: 3px;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.main{
+  display: flex;
+}
+.first{
+  width: 49%;
+}
+.second{
+  width: 49%;
+}
+
+@media(max-width:992px){
+  
+.main{
+  display: grid;
+  margin-left: 21px;
+}
+.first{
+  width: 99%;
+}
+.second{
+  
+  margin-top: 10px;
+  width: 99%;
+}
+}

@@ -1,0 +1,3711 @@
+{
+  "contractName": "Timing",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "tokenHolderAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "griseWeek",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "claimedAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "TranscFeeClaimed",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "sellTranscFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "currentLPDay",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "currentGriseWeek",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "currentGriseDay",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"tokenHolderAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"griseWeek\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"claimedAmount\",\"type\":\"uint256\"}],\"name\":\"TranscFeeClaimed\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"currentGriseDay\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentGriseWeek\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentLPDay\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"sellTranscFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/Dhaval/eth/grise/src/contracts/Timing.sol\":\"Timing\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Dhaval/eth/grise/src/contracts/Context.sol\":{\"keccak256\":\"0x8ecc1bc837beed99e1ed4db093b9013a32cf4b1d0fff8db1a1361e296506dc68\",\"license\":\"--\",\"urls\":[\"bzz-raw://cf7b7da4c4157a639e2c25363782a8c03f7921414fce41e15b3a20dd4c86745a\",\"dweb:/ipfs/QmPDQxKhYhsxaXHqQ29Jxnkc9TEkYD3Lb17eDJVF5HrT9v\"]},\"/C/Users/Dhaval/eth/grise/src/contracts/Declaration.sol\":{\"keccak256\":\"0x4747fd43ac08b94c04d796ed9399ae1018f7e36d5d2a77260620f7fd3a8c80b8\",\"license\":\"--\",\"urls\":[\"bzz-raw://e8f675e956cbd8bbf82644371b165a68bec77944f0a173cd7c5c8800c0906a51\",\"dweb:/ipfs/Qmcw6vKr1uzKbcJaWJWSi3zRvDZg7wtnT26tcg4XmZs4Wb\"]},\"/C/Users/Dhaval/eth/grise/src/contracts/Events.sol\":{\"keccak256\":\"0xe81ff8d72dbe7d513863f217fa7442edc56229a93bd86eee0ac83ed553d00e66\",\"license\":\"--\",\"urls\":[\"bzz-raw://c873dad7c5c9ded7417f0bba411080a40eb9a69d02832ff18373b1af99eb466e\",\"dweb:/ipfs/QmPPwZSQ7E3ii65mJeYAEoVgxqT8wWU7gPyBRYNqsKXGZL\"]},\"/C/Users/Dhaval/eth/grise/src/contracts/SafeMath.sol\":{\"keccak256\":\"0xd3ea0438fb7fa155543f9ed4cae7dc86ed0d5997fe7f3b71a7ad18b3caadd233\",\"license\":\"--\",\"urls\":[\"bzz-raw://5bf3eb53f293b54fa951ee5ac64267997025ac7b4d99981ba95a8df9ba2eaafa\",\"dweb:/ipfs/QmbxS5LM7UVQ3oKZMXWoTKpNk13bRn2pqziSGCmzfXsEZA\"]},\"/C/Users/Dhaval/eth/grise/src/contracts/Timing.sol\":{\"keccak256\":\"0x6f5fc210e3315965833394c3db8aad5df3e24007ee94509f38e74a7d340f8430\",\"license\":\"--\",\"urls\":[\"bzz-raw://e1abceee54780ddcd44c9f6e00953aaff915d57ed8204a94e6c9c5ef2c44fa77\",\"dweb:/ipfs/QmePZHbtpZXxdcFFYz7DRxD7GVN48LoBj5H9pCxqVFaT7B\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: --🦉--\r\n\r\npragma solidity =0.7.6;\r\n\r\nimport \"./Declaration.sol\";\r\n\r\nabstract contract Timing is Declaration {\r\n\r\n    function currentLPDay() public view returns (uint256) {\r\n        return _getNow() >= LAUNCH_TIME ? _currentLPDay() : 0;\r\n    } \r\n\r\n    function _currentLPDay() internal view returns (uint256) {\r\n        return _LPDayFromStamp(_getNow());\r\n    }\r\n\r\n    function _LPDayFromStamp(uint256 _timestamp) internal view returns (uint256) {\r\n        return uint256((_timestamp - LAUNCH_TIME) / SECONDS_IN_DAY_LP);\r\n    }\r\n\r\n\r\n    function currentGriseWeek() public view returns (uint256) {\r\n        return (currentGriseDay() / GRISE_WEEK);\r\n    }\r\n\r\n    function currentGriseDay() public view returns (uint256) {\r\n        return _getNow() >= LAUNCH_TIME ? _currentGriseDay() : 0;\r\n    }\r\n\r\n    function _currentGriseDay() internal view returns (uint256) {\r\n        return _griseDayFromStamp(_getNow());\r\n    }\r\n\r\n    function _nextGriseDay() internal view returns (uint256) {\r\n        return _currentGriseDay() + 1;\r\n    }\r\n\r\n    function _previousGriseDay() internal view returns (uint256) {\r\n        return _currentGriseDay() - 1;\r\n    }\r\n\r\n    function _griseDayFromStamp(uint256 _timestamp) internal view returns (uint256) {\r\n        return uint256((_timestamp - LAUNCH_TIME) / SECONDS_IN_DAY);\r\n    }\r\n\r\n    function _getNow() internal view returns (uint256) {\r\n        return block.timestamp;\r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\Dhaval\\eth\\grise\\src\\contracts\\Timing.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Dhaval/eth/grise/src/contracts/Timing.sol",
+    "exportedSymbols": {
+      "Context": [
+        24
+      ],
+      "Declaration": [
+        162
+      ],
+      "ERC20TokenI": [
+        50
+      ],
+      "Events": [
+        173
+      ],
+      "SafeMath": [
+        1598
+      ],
+      "Timing": [
+        1735
+      ]
+    },
+    "id": 1736,
+    "license": "--",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1600,
+        "literals": [
+          "solidity",
+          "=",
+          "0.7",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:23:6"
+      },
+      {
+        "absolutePath": "/C/Users/Dhaval/eth/grise/src/contracts/Declaration.sol",
+        "file": "./Declaration.sol",
+        "id": 1601,
+        "nodeType": "ImportDirective",
+        "scope": 1736,
+        "sourceUnit": 163,
+        "src": "67:27:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 1602,
+              "name": "Declaration",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 162,
+              "src": "126:11:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Declaration_$162",
+                "typeString": "contract Declaration"
+              }
+            },
+            "id": 1603,
+            "nodeType": "InheritanceSpecifier",
+            "src": "126:11:6"
+          }
+        ],
+        "contractDependencies": [
+          24,
+          162,
+          173
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1735,
+        "linearizedBaseContracts": [
+          1735,
+          162,
+          173,
+          24
+        ],
+        "name": "Timing",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1617,
+              "nodeType": "Block",
+              "src": "201:72:6",
+              "statements": [
+                {
+                  "expression": {
+                    "condition": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 1611,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 1608,
+                          "name": "_getNow",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1734,
+                          "src": "219:7:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view returns (uint256)"
+                          }
+                        },
+                        "id": 1609,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "219:9:6",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": ">=",
+                      "rightExpression": {
+                        "id": 1610,
+                        "name": "LAUNCH_TIME",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 89,
+                        "src": "232:11:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "219:24:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "falseExpression": {
+                      "hexValue": "30",
+                      "id": 1614,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "264:1:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "id": 1615,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "Conditional",
+                    "src": "219:46:6",
+                    "trueExpression": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 1612,
+                        "name": "_currentLPDay",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1629,
+                        "src": "246:13:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                          "typeString": "function () view returns (uint256)"
+                        }
+                      },
+                      "id": 1613,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "246:15:6",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1607,
+                  "id": 1616,
+                  "nodeType": "Return",
+                  "src": "212:53:6"
+                }
+              ]
+            },
+            "functionSelector": "edc9a25f",
+            "id": 1618,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "currentLPDay",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1604,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "168:2:6"
+            },
+            "returnParameters": {
+              "id": 1607,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1606,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1618,
+                  "src": "192:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1605,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "192:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "191:9:6"
+            },
+            "scope": 1735,
+            "src": "147:126:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1628,
+              "nodeType": "Block",
+              "src": "339:52:6",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 1624,
+                          "name": "_getNow",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1734,
+                          "src": "373:7:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view returns (uint256)"
+                          }
+                        },
+                        "id": 1625,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "373:9:6",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 1623,
+                      "name": "_LPDayFromStamp",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1647,
+                      "src": "357:15:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 1626,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "357:26:6",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1622,
+                  "id": 1627,
+                  "nodeType": "Return",
+                  "src": "350:33:6"
+                }
+              ]
+            },
+            "id": 1629,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_currentLPDay",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1619,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "304:2:6"
+            },
+            "returnParameters": {
+              "id": 1622,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1621,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1629,
+                  "src": "330:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1620,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "330:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "329:9:6"
+            },
+            "scope": 1735,
+            "src": "282:109:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1646,
+              "nodeType": "Block",
+              "src": "476:81:6",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 1643,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "components": [
+                            {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "id": 1640,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "leftExpression": {
+                                "id": 1638,
+                                "name": "_timestamp",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1631,
+                                "src": "503:10:6",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "nodeType": "BinaryOperation",
+                              "operator": "-",
+                              "rightExpression": {
+                                "id": 1639,
+                                "name": "LAUNCH_TIME",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 89,
+                                "src": "516:11:6",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "src": "503:24:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "id": 1641,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "TupleExpression",
+                          "src": "502:26:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "/",
+                        "rightExpression": {
+                          "id": 1642,
+                          "name": "SECONDS_IN_DAY_LP",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 68,
+                          "src": "531:17:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint32",
+                            "typeString": "uint32"
+                          }
+                        },
+                        "src": "502:46:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 1637,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "494:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint256_$",
+                        "typeString": "type(uint256)"
+                      },
+                      "typeName": {
+                        "id": 1636,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "494:7:6",
+                        "typeDescriptions": {}
+                      }
+                    },
+                    "id": 1644,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "494:55:6",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1635,
+                  "id": 1645,
+                  "nodeType": "Return",
+                  "src": "487:62:6"
+                }
+              ]
+            },
+            "id": 1647,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_LPDayFromStamp",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1632,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1631,
+                  "mutability": "mutable",
+                  "name": "_timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1647,
+                  "src": "424:18:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1630,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "424:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "423:20:6"
+            },
+            "returnParameters": {
+              "id": 1635,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1634,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1647,
+                  "src": "467:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1633,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "467:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "466:9:6"
+            },
+            "scope": 1735,
+            "src": "399:158:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1658,
+              "nodeType": "Block",
+              "src": "625:58:6",
+              "statements": [
+                {
+                  "expression": {
+                    "components": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 1655,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 1652,
+                            "name": "currentGriseDay",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1674,
+                            "src": "644:15:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                              "typeString": "function () view returns (uint256)"
+                            }
+                          },
+                          "id": 1653,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "644:17:6",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "/",
+                        "rightExpression": {
+                          "id": 1654,
+                          "name": "GRISE_WEEK",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 71,
+                          "src": "664:10:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint32",
+                            "typeString": "uint32"
+                          }
+                        },
+                        "src": "644:30:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 1656,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "643:32:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1651,
+                  "id": 1657,
+                  "nodeType": "Return",
+                  "src": "636:39:6"
+                }
+              ]
+            },
+            "functionSelector": "87cd0cd2",
+            "id": 1659,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "currentGriseWeek",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1648,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "592:2:6"
+            },
+            "returnParameters": {
+              "id": 1651,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1650,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1659,
+                  "src": "616:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1649,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "616:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "615:9:6"
+            },
+            "scope": 1735,
+            "src": "567:116:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1673,
+              "nodeType": "Block",
+              "src": "748:75:6",
+              "statements": [
+                {
+                  "expression": {
+                    "condition": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 1667,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 1664,
+                          "name": "_getNow",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1734,
+                          "src": "766:7:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view returns (uint256)"
+                          }
+                        },
+                        "id": 1665,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "766:9:6",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": ">=",
+                      "rightExpression": {
+                        "id": 1666,
+                        "name": "LAUNCH_TIME",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 89,
+                        "src": "779:11:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "766:24:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "falseExpression": {
+                      "hexValue": "30",
+                      "id": 1670,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "814:1:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "id": 1671,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "Conditional",
+                    "src": "766:49:6",
+                    "trueExpression": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 1668,
+                        "name": "_currentGriseDay",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1685,
+                        "src": "793:16:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                          "typeString": "function () view returns (uint256)"
+                        }
+                      },
+                      "id": 1669,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "793:18:6",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1663,
+                  "id": 1672,
+                  "nodeType": "Return",
+                  "src": "759:56:6"
+                }
+              ]
+            },
+            "functionSelector": "c2889b57",
+            "id": 1674,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "currentGriseDay",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1660,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "715:2:6"
+            },
+            "returnParameters": {
+              "id": 1663,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1662,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1674,
+                  "src": "739:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1661,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "739:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "738:9:6"
+            },
+            "scope": 1735,
+            "src": "691:132:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1684,
+              "nodeType": "Block",
+              "src": "891:55:6",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 1680,
+                          "name": "_getNow",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1734,
+                          "src": "928:7:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view returns (uint256)"
+                          }
+                        },
+                        "id": 1681,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "928:9:6",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 1679,
+                      "name": "_griseDayFromStamp",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1725,
+                      "src": "909:18:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 1682,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "909:29:6",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1678,
+                  "id": 1683,
+                  "nodeType": "Return",
+                  "src": "902:36:6"
+                }
+              ]
+            },
+            "id": 1685,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_currentGriseDay",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1675,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "856:2:6"
+            },
+            "returnParameters": {
+              "id": 1678,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1677,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1685,
+                  "src": "882:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1676,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "882:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "881:9:6"
+            },
+            "scope": 1735,
+            "src": "831:115:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1695,
+              "nodeType": "Block",
+              "src": "1011:48:6",
+              "statements": [
+                {
+                  "expression": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1693,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 1690,
+                        "name": "_currentGriseDay",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1685,
+                        "src": "1029:16:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                          "typeString": "function () view returns (uint256)"
+                        }
+                      },
+                      "id": 1691,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1029:18:6",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "+",
+                    "rightExpression": {
+                      "hexValue": "31",
+                      "id": 1692,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1050:1:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1029:22:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1689,
+                  "id": 1694,
+                  "nodeType": "Return",
+                  "src": "1022:29:6"
+                }
+              ]
+            },
+            "id": 1696,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_nextGriseDay",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1686,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "976:2:6"
+            },
+            "returnParameters": {
+              "id": 1689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1688,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1696,
+                  "src": "1002:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1687,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1002:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1001:9:6"
+            },
+            "scope": 1735,
+            "src": "954:105:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1706,
+              "nodeType": "Block",
+              "src": "1128:48:6",
+              "statements": [
+                {
+                  "expression": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1704,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 1701,
+                        "name": "_currentGriseDay",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1685,
+                        "src": "1146:16:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                          "typeString": "function () view returns (uint256)"
+                        }
+                      },
+                      "id": 1702,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1146:18:6",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "-",
+                    "rightExpression": {
+                      "hexValue": "31",
+                      "id": 1703,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1167:1:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1146:22:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1700,
+                  "id": 1705,
+                  "nodeType": "Return",
+                  "src": "1139:29:6"
+                }
+              ]
+            },
+            "id": 1707,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_previousGriseDay",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1697,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1093:2:6"
+            },
+            "returnParameters": {
+              "id": 1700,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1699,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1707,
+                  "src": "1119:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1698,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1119:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1118:9:6"
+            },
+            "scope": 1735,
+            "src": "1067:109:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1724,
+              "nodeType": "Block",
+              "src": "1264:78:6",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 1721,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "components": [
+                            {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "id": 1718,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "leftExpression": {
+                                "id": 1716,
+                                "name": "_timestamp",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1709,
+                                "src": "1291:10:6",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "nodeType": "BinaryOperation",
+                              "operator": "-",
+                              "rightExpression": {
+                                "id": 1717,
+                                "name": "LAUNCH_TIME",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 89,
+                                "src": "1304:11:6",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "src": "1291:24:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "id": 1719,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "TupleExpression",
+                          "src": "1290:26:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "/",
+                        "rightExpression": {
+                          "id": 1720,
+                          "name": "SECONDS_IN_DAY",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 65,
+                          "src": "1319:14:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint32",
+                            "typeString": "uint32"
+                          }
+                        },
+                        "src": "1290:43:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 1715,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "1282:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint256_$",
+                        "typeString": "type(uint256)"
+                      },
+                      "typeName": {
+                        "id": 1714,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1282:7:6",
+                        "typeDescriptions": {}
+                      }
+                    },
+                    "id": 1722,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1282:52:6",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1713,
+                  "id": 1723,
+                  "nodeType": "Return",
+                  "src": "1275:59:6"
+                }
+              ]
+            },
+            "id": 1725,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_griseDayFromStamp",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1710,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1709,
+                  "mutability": "mutable",
+                  "name": "_timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1725,
+                  "src": "1212:18:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1708,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1212:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1211:20:6"
+            },
+            "returnParameters": {
+              "id": 1713,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1712,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1725,
+                  "src": "1255:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1711,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1255:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1254:9:6"
+            },
+            "scope": 1735,
+            "src": "1184:158:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1733,
+              "nodeType": "Block",
+              "src": "1401:41:6",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "id": 1730,
+                      "name": "block",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4294967292,
+                      "src": "1419:5:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_block",
+                        "typeString": "block"
+                      }
+                    },
+                    "id": 1731,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "timestamp",
+                    "nodeType": "MemberAccess",
+                    "src": "1419:15:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1729,
+                  "id": 1732,
+                  "nodeType": "Return",
+                  "src": "1412:22:6"
+                }
+              ]
+            },
+            "id": 1734,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_getNow",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1726,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1366:2:6"
+            },
+            "returnParameters": {
+              "id": 1729,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1728,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1734,
+                  "src": "1392:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1727,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1392:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1391:9:6"
+            },
+            "scope": 1735,
+            "src": "1350:92:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1736,
+        "src": "98:1347:6"
+      }
+    ],
+    "src": "40:1405:6"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/Dhaval/eth/grise/src/contracts/Timing.sol",
+      "exportedSymbols": {
+        "Context": [
+          24
+        ],
+        "Declaration": [
+          162
+        ],
+        "ERC20TokenI": [
+          50
+        ],
+        "Events": [
+          173
+        ],
+        "SafeMath": [
+          1598
+        ],
+        "Timing": [
+          1735
+        ]
+      },
+      "license": "--"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "=",
+            "0.7",
+            ".6"
+          ]
+        },
+        "id": 1600,
+        "name": "PragmaDirective",
+        "src": "40:23:6"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 163,
+          "absolutePath": "/C/Users/Dhaval/eth/grise/src/contracts/Declaration.sol",
+          "file": "./Declaration.sol",
+          "scope": 1736,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1601,
+        "name": "ImportDirective",
+        "src": "67:27:6"
+      },
+      {
+        "attributes": {
+          "abstract": true,
+          "contractDependencies": [
+            24,
+            162,
+            173
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1735,
+            162,
+            173,
+            24
+          ],
+          "name": "Timing",
+          "scope": 1736
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "name": "Declaration",
+                  "referencedDeclaration": 162,
+                  "type": "contract Declaration"
+                },
+                "id": 1602,
+                "name": "UserDefinedTypeName",
+                "src": "126:11:6"
+              }
+            ],
+            "id": 1603,
+            "name": "InheritanceSpecifier",
+            "src": "126:11:6"
+          },
+          {
+            "attributes": {
+              "functionSelector": "edc9a25f",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "currentLPDay",
+              "scope": 1735,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1604,
+                "name": "ParameterList",
+                "src": "168:2:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1618,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1605,
+                        "name": "ElementaryTypeName",
+                        "src": "192:7:6"
+                      }
+                    ],
+                    "id": 1606,
+                    "name": "VariableDeclaration",
+                    "src": "192:7:6"
+                  }
+                ],
+                "id": 1607,
+                "name": "ParameterList",
+                "src": "191:9:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1607
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": ">=",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "arguments": [
+                                    null
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "tryCall": false,
+                                  "type": "uint256",
+                                  "type_conversion": false
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        null
+                                      ],
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1734,
+                                      "type": "function () view returns (uint256)",
+                                      "value": "_getNow"
+                                    },
+                                    "id": 1608,
+                                    "name": "Identifier",
+                                    "src": "219:7:6"
+                                  }
+                                ],
+                                "id": 1609,
+                                "name": "FunctionCall",
+                                "src": "219:9:6"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 89,
+                                  "type": "uint256",
+                                  "value": "LAUNCH_TIME"
+                                },
+                                "id": 1610,
+                                "name": "Identifier",
+                                "src": "232:11:6"
+                              }
+                            ],
+                            "id": 1611,
+                            "name": "BinaryOperation",
+                            "src": "219:24:6"
+                          },
+                          {
+                            "attributes": {
+                              "arguments": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "uint256",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    null
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1629,
+                                  "type": "function () view returns (uint256)",
+                                  "value": "_currentLPDay"
+                                },
+                                "id": 1612,
+                                "name": "Identifier",
+                                "src": "246:13:6"
+                              }
+                            ],
+                            "id": 1613,
+                            "name": "FunctionCall",
+                            "src": "246:15:6"
+                          },
+                          {
+                            "attributes": {
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 1614,
+                            "name": "Literal",
+                            "src": "264:1:6"
+                          }
+                        ],
+                        "id": 1615,
+                        "name": "Conditional",
+                        "src": "219:46:6"
+                      }
+                    ],
+                    "id": 1616,
+                    "name": "Return",
+                    "src": "212:53:6"
+                  }
+                ],
+                "id": 1617,
+                "name": "Block",
+                "src": "201:72:6"
+              }
+            ],
+            "id": 1618,
+            "name": "FunctionDefinition",
+            "src": "147:126:6"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_currentLPDay",
+              "scope": 1735,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1619,
+                "name": "ParameterList",
+                "src": "304:2:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1629,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1620,
+                        "name": "ElementaryTypeName",
+                        "src": "330:7:6"
+                      }
+                    ],
+                    "id": 1621,
+                    "name": "VariableDeclaration",
+                    "src": "330:7:6"
+                  }
+                ],
+                "id": 1622,
+                "name": "ParameterList",
+                "src": "329:9:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1622
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1647,
+                              "type": "function (uint256) view returns (uint256)",
+                              "value": "_LPDayFromStamp"
+                            },
+                            "id": 1623,
+                            "name": "Identifier",
+                            "src": "357:15:6"
+                          },
+                          {
+                            "attributes": {
+                              "arguments": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "uint256",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    null
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1734,
+                                  "type": "function () view returns (uint256)",
+                                  "value": "_getNow"
+                                },
+                                "id": 1624,
+                                "name": "Identifier",
+                                "src": "373:7:6"
+                              }
+                            ],
+                            "id": 1625,
+                            "name": "FunctionCall",
+                            "src": "373:9:6"
+                          }
+                        ],
+                        "id": 1626,
+                        "name": "FunctionCall",
+                        "src": "357:26:6"
+                      }
+                    ],
+                    "id": 1627,
+                    "name": "Return",
+                    "src": "350:33:6"
+                  }
+                ],
+                "id": 1628,
+                "name": "Block",
+                "src": "339:52:6"
+              }
+            ],
+            "id": 1629,
+            "name": "FunctionDefinition",
+            "src": "282:109:6"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_LPDayFromStamp",
+              "scope": 1735,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_timestamp",
+                      "scope": 1647,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1630,
+                        "name": "ElementaryTypeName",
+                        "src": "424:7:6"
+                      }
+                    ],
+                    "id": 1631,
+                    "name": "VariableDeclaration",
+                    "src": "424:18:6"
+                  }
+                ],
+                "id": 1632,
+                "name": "ParameterList",
+                "src": "423:20:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1647,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1633,
+                        "name": "ElementaryTypeName",
+                        "src": "467:7:6"
+                      }
+                    ],
+                    "id": 1634,
+                    "name": "VariableDeclaration",
+                    "src": "467:7:6"
+                  }
+                ],
+                "id": 1635,
+                "name": "ParameterList",
+                "src": "466:9:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1635
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": true
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "type(uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "uint256"
+                                },
+                                "id": 1636,
+                                "name": "ElementaryTypeName",
+                                "src": "494:7:6"
+                              }
+                            ],
+                            "id": 1637,
+                            "name": "ElementaryTypeNameExpression",
+                            "src": "494:7:6"
+                          },
+                          {
+                            "attributes": {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "/",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "commonType": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "-",
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 1631,
+                                          "type": "uint256",
+                                          "value": "_timestamp"
+                                        },
+                                        "id": 1638,
+                                        "name": "Identifier",
+                                        "src": "503:10:6"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 89,
+                                          "type": "uint256",
+                                          "value": "LAUNCH_TIME"
+                                        },
+                                        "id": 1639,
+                                        "name": "Identifier",
+                                        "src": "516:11:6"
+                                      }
+                                    ],
+                                    "id": 1640,
+                                    "name": "BinaryOperation",
+                                    "src": "503:24:6"
+                                  }
+                                ],
+                                "id": 1641,
+                                "name": "TupleExpression",
+                                "src": "502:26:6"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 68,
+                                  "type": "uint32",
+                                  "value": "SECONDS_IN_DAY_LP"
+                                },
+                                "id": 1642,
+                                "name": "Identifier",
+                                "src": "531:17:6"
+                              }
+                            ],
+                            "id": 1643,
+                            "name": "BinaryOperation",
+                            "src": "502:46:6"
+                          }
+                        ],
+                        "id": 1644,
+                        "name": "FunctionCall",
+                        "src": "494:55:6"
+                      }
+                    ],
+                    "id": 1645,
+                    "name": "Return",
+                    "src": "487:62:6"
+                  }
+                ],
+                "id": 1646,
+                "name": "Block",
+                "src": "476:81:6"
+              }
+            ],
+            "id": 1647,
+            "name": "FunctionDefinition",
+            "src": "399:158:6"
+          },
+          {
+            "attributes": {
+              "functionSelector": "87cd0cd2",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "currentGriseWeek",
+              "scope": 1735,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1648,
+                "name": "ParameterList",
+                "src": "592:2:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1659,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1649,
+                        "name": "ElementaryTypeName",
+                        "src": "616:7:6"
+                      }
+                    ],
+                    "id": 1650,
+                    "name": "VariableDeclaration",
+                    "src": "616:7:6"
+                  }
+                ],
+                "id": 1651,
+                "name": "ParameterList",
+                "src": "615:9:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1651
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "/",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "arguments": [
+                                    null
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "tryCall": false,
+                                  "type": "uint256",
+                                  "type_conversion": false
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        null
+                                      ],
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1674,
+                                      "type": "function () view returns (uint256)",
+                                      "value": "currentGriseDay"
+                                    },
+                                    "id": 1652,
+                                    "name": "Identifier",
+                                    "src": "644:15:6"
+                                  }
+                                ],
+                                "id": 1653,
+                                "name": "FunctionCall",
+                                "src": "644:17:6"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 71,
+                                  "type": "uint32",
+                                  "value": "GRISE_WEEK"
+                                },
+                                "id": 1654,
+                                "name": "Identifier",
+                                "src": "664:10:6"
+                              }
+                            ],
+                            "id": 1655,
+                            "name": "BinaryOperation",
+                            "src": "644:30:6"
+                          }
+                        ],
+                        "id": 1656,
+                        "name": "TupleExpression",
+                        "src": "643:32:6"
+                      }
+                    ],
+                    "id": 1657,
+                    "name": "Return",
+                    "src": "636:39:6"
+                  }
+                ],
+                "id": 1658,
+                "name": "Block",
+                "src": "625:58:6"
+              }
+            ],
+            "id": 1659,
+            "name": "FunctionDefinition",
+            "src": "567:116:6"
+          },
+          {
+            "attributes": {
+              "functionSelector": "c2889b57",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "currentGriseDay",
+              "scope": 1735,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1660,
+                "name": "ParameterList",
+                "src": "715:2:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1674,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1661,
+                        "name": "ElementaryTypeName",
+                        "src": "739:7:6"
+                      }
+                    ],
+                    "id": 1662,
+                    "name": "VariableDeclaration",
+                    "src": "739:7:6"
+                  }
+                ],
+                "id": 1663,
+                "name": "ParameterList",
+                "src": "738:9:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1663
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": ">=",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "arguments": [
+                                    null
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "tryCall": false,
+                                  "type": "uint256",
+                                  "type_conversion": false
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        null
+                                      ],
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1734,
+                                      "type": "function () view returns (uint256)",
+                                      "value": "_getNow"
+                                    },
+                                    "id": 1664,
+                                    "name": "Identifier",
+                                    "src": "766:7:6"
+                                  }
+                                ],
+                                "id": 1665,
+                                "name": "FunctionCall",
+                                "src": "766:9:6"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 89,
+                                  "type": "uint256",
+                                  "value": "LAUNCH_TIME"
+                                },
+                                "id": 1666,
+                                "name": "Identifier",
+                                "src": "779:11:6"
+                              }
+                            ],
+                            "id": 1667,
+                            "name": "BinaryOperation",
+                            "src": "766:24:6"
+                          },
+                          {
+                            "attributes": {
+                              "arguments": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "uint256",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    null
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1685,
+                                  "type": "function () view returns (uint256)",
+                                  "value": "_currentGriseDay"
+                                },
+                                "id": 1668,
+                                "name": "Identifier",
+                                "src": "793:16:6"
+                              }
+                            ],
+                            "id": 1669,
+                            "name": "FunctionCall",
+                            "src": "793:18:6"
+                          },
+                          {
+                            "attributes": {
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 1670,
+                            "name": "Literal",
+                            "src": "814:1:6"
+                          }
+                        ],
+                        "id": 1671,
+                        "name": "Conditional",
+                        "src": "766:49:6"
+                      }
+                    ],
+                    "id": 1672,
+                    "name": "Return",
+                    "src": "759:56:6"
+                  }
+                ],
+                "id": 1673,
+                "name": "Block",
+                "src": "748:75:6"
+              }
+            ],
+            "id": 1674,
+            "name": "FunctionDefinition",
+            "src": "691:132:6"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_currentGriseDay",
+              "scope": 1735,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1675,
+                "name": "ParameterList",
+                "src": "856:2:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1685,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1676,
+                        "name": "ElementaryTypeName",
+                        "src": "882:7:6"
+                      }
+                    ],
+                    "id": 1677,
+                    "name": "VariableDeclaration",
+                    "src": "882:7:6"
+                  }
+                ],
+                "id": 1678,
+                "name": "ParameterList",
+                "src": "881:9:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1678
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1725,
+                              "type": "function (uint256) view returns (uint256)",
+                              "value": "_griseDayFromStamp"
+                            },
+                            "id": 1679,
+                            "name": "Identifier",
+                            "src": "909:18:6"
+                          },
+                          {
+                            "attributes": {
+                              "arguments": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "uint256",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    null
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1734,
+                                  "type": "function () view returns (uint256)",
+                                  "value": "_getNow"
+                                },
+                                "id": 1680,
+                                "name": "Identifier",
+                                "src": "928:7:6"
+                              }
+                            ],
+                            "id": 1681,
+                            "name": "FunctionCall",
+                            "src": "928:9:6"
+                          }
+                        ],
+                        "id": 1682,
+                        "name": "FunctionCall",
+                        "src": "909:29:6"
+                      }
+                    ],
+                    "id": 1683,
+                    "name": "Return",
+                    "src": "902:36:6"
+                  }
+                ],
+                "id": 1684,
+                "name": "Block",
+                "src": "891:55:6"
+              }
+            ],
+            "id": 1685,
+            "name": "FunctionDefinition",
+            "src": "831:115:6"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_nextGriseDay",
+              "scope": 1735,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1686,
+                "name": "ParameterList",
+                "src": "976:2:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1696,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1687,
+                        "name": "ElementaryTypeName",
+                        "src": "1002:7:6"
+                      }
+                    ],
+                    "id": 1688,
+                    "name": "VariableDeclaration",
+                    "src": "1002:7:6"
+                  }
+                ],
+                "id": 1689,
+                "name": "ParameterList",
+                "src": "1001:9:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1689
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "+",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "arguments": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "uint256",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    null
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1685,
+                                  "type": "function () view returns (uint256)",
+                                  "value": "_currentGriseDay"
+                                },
+                                "id": 1690,
+                                "name": "Identifier",
+                                "src": "1029:16:6"
+                              }
+                            ],
+                            "id": 1691,
+                            "name": "FunctionCall",
+                            "src": "1029:18:6"
+                          },
+                          {
+                            "attributes": {
+                              "hexvalue": "31",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "token": "number",
+                              "type": "int_const 1",
+                              "value": "1"
+                            },
+                            "id": 1692,
+                            "name": "Literal",
+                            "src": "1050:1:6"
+                          }
+                        ],
+                        "id": 1693,
+                        "name": "BinaryOperation",
+                        "src": "1029:22:6"
+                      }
+                    ],
+                    "id": 1694,
+                    "name": "Return",
+                    "src": "1022:29:6"
+                  }
+                ],
+                "id": 1695,
+                "name": "Block",
+                "src": "1011:48:6"
+              }
+            ],
+            "id": 1696,
+            "name": "FunctionDefinition",
+            "src": "954:105:6"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_previousGriseDay",
+              "scope": 1735,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1697,
+                "name": "ParameterList",
+                "src": "1093:2:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1707,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1698,
+                        "name": "ElementaryTypeName",
+                        "src": "1119:7:6"
+                      }
+                    ],
+                    "id": 1699,
+                    "name": "VariableDeclaration",
+                    "src": "1119:7:6"
+                  }
+                ],
+                "id": 1700,
+                "name": "ParameterList",
+                "src": "1118:9:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1700
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "-",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "arguments": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "uint256",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    null
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1685,
+                                  "type": "function () view returns (uint256)",
+                                  "value": "_currentGriseDay"
+                                },
+                                "id": 1701,
+                                "name": "Identifier",
+                                "src": "1146:16:6"
+                              }
+                            ],
+                            "id": 1702,
+                            "name": "FunctionCall",
+                            "src": "1146:18:6"
+                          },
+                          {
+                            "attributes": {
+                              "hexvalue": "31",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "token": "number",
+                              "type": "int_const 1",
+                              "value": "1"
+                            },
+                            "id": 1703,
+                            "name": "Literal",
+                            "src": "1167:1:6"
+                          }
+                        ],
+                        "id": 1704,
+                        "name": "BinaryOperation",
+                        "src": "1146:22:6"
+                      }
+                    ],
+                    "id": 1705,
+                    "name": "Return",
+                    "src": "1139:29:6"
+                  }
+                ],
+                "id": 1706,
+                "name": "Block",
+                "src": "1128:48:6"
+              }
+            ],
+            "id": 1707,
+            "name": "FunctionDefinition",
+            "src": "1067:109:6"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_griseDayFromStamp",
+              "scope": 1735,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_timestamp",
+                      "scope": 1725,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1708,
+                        "name": "ElementaryTypeName",
+                        "src": "1212:7:6"
+                      }
+                    ],
+                    "id": 1709,
+                    "name": "VariableDeclaration",
+                    "src": "1212:18:6"
+                  }
+                ],
+                "id": 1710,
+                "name": "ParameterList",
+                "src": "1211:20:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1725,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1711,
+                        "name": "ElementaryTypeName",
+                        "src": "1255:7:6"
+                      }
+                    ],
+                    "id": 1712,
+                    "name": "VariableDeclaration",
+                    "src": "1255:7:6"
+                  }
+                ],
+                "id": 1713,
+                "name": "ParameterList",
+                "src": "1254:9:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1713
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": true
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "type(uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "uint256"
+                                },
+                                "id": 1714,
+                                "name": "ElementaryTypeName",
+                                "src": "1282:7:6"
+                              }
+                            ],
+                            "id": 1715,
+                            "name": "ElementaryTypeNameExpression",
+                            "src": "1282:7:6"
+                          },
+                          {
+                            "attributes": {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "/",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "commonType": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "-",
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 1709,
+                                          "type": "uint256",
+                                          "value": "_timestamp"
+                                        },
+                                        "id": 1716,
+                                        "name": "Identifier",
+                                        "src": "1291:10:6"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 89,
+                                          "type": "uint256",
+                                          "value": "LAUNCH_TIME"
+                                        },
+                                        "id": 1717,
+                                        "name": "Identifier",
+                                        "src": "1304:11:6"
+                                      }
+                                    ],
+                                    "id": 1718,
+                                    "name": "BinaryOperation",
+                                    "src": "1291:24:6"
+                                  }
+                                ],
+                                "id": 1719,
+                                "name": "TupleExpression",
+                                "src": "1290:26:6"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 65,
+                                  "type": "uint32",
+                                  "value": "SECONDS_IN_DAY"
+                                },
+                                "id": 1720,
+                                "name": "Identifier",
+                                "src": "1319:14:6"
+                              }
+                            ],
+                            "id": 1721,
+                            "name": "BinaryOperation",
+                            "src": "1290:43:6"
+                          }
+                        ],
+                        "id": 1722,
+                        "name": "FunctionCall",
+                        "src": "1282:52:6"
+                      }
+                    ],
+                    "id": 1723,
+                    "name": "Return",
+                    "src": "1275:59:6"
+                  }
+                ],
+                "id": 1724,
+                "name": "Block",
+                "src": "1264:78:6"
+              }
+            ],
+            "id": 1725,
+            "name": "FunctionDefinition",
+            "src": "1184:158:6"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_getNow",
+              "scope": 1735,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1726,
+                "name": "ParameterList",
+                "src": "1366:2:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1734,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1727,
+                        "name": "ElementaryTypeName",
+                        "src": "1392:7:6"
+                      }
+                    ],
+                    "id": 1728,
+                    "name": "VariableDeclaration",
+                    "src": "1392:7:6"
+                  }
+                ],
+                "id": 1729,
+                "name": "ParameterList",
+                "src": "1391:9:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1729
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "timestamp",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4294967292,
+                              "type": "block",
+                              "value": "block"
+                            },
+                            "id": 1730,
+                            "name": "Identifier",
+                            "src": "1419:5:6"
+                          }
+                        ],
+                        "id": 1731,
+                        "name": "MemberAccess",
+                        "src": "1419:15:6"
+                      }
+                    ],
+                    "id": 1732,
+                    "name": "Return",
+                    "src": "1412:22:6"
+                  }
+                ],
+                "id": 1733,
+                "name": "Block",
+                "src": "1401:41:6"
+              }
+            ],
+            "id": 1734,
+            "name": "FunctionDefinition",
+            "src": "1350:92:6"
+          }
+        ],
+        "id": 1735,
+        "name": "ContractDefinition",
+        "src": "98:1347:6"
+      }
+    ],
+    "id": 1736,
+    "name": "SourceUnit",
+    "src": "40:1405:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-03-12T13:39:05.474Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

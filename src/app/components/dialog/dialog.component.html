@@ -1,0 +1,94 @@
+<div class="model" style="width: 100%;height: 90%;">
+
+    <!-- <div style="float: right;background-color:black;border-radius:50px; ">
+      <i class="fas fa-info" style="color: white;margin:15px; background-color:black; "></i>
+    </div> -->
+    <!-- <br>
+    <br> -->
+    <div>
+        <div style="float: left">
+            <button class="button" mat-button (click)="selectDeselectAll()" style="margin-top: 0">{{ allSelected ?
+                'Deselect All Days' : 'Select All Days' }}</button>
+            <button class="button" mat-button (click)="selectDeselectFixed()" style="margin-top: 0">{{ fixedSelected ?
+                'Deselect Fixed Days' : 'Select Fixed Days' }}</button>
+            <button class="button" mat-button (click)="selectDeselectRandom()" style="margin-top: 0">{{ randomSelected ?
+                'Deselect Random Days' : 'Select Random Days' }}</button>
+        </div>
+        <!-- <div style="float: right">
+            
+                <button class="button" mat-button (click)="select_all()" style="margin-top: 0;width:100px">Select All</button>
+        
+        </div> -->
+    </div>
+    <div style="width: 656px;height: 445px; overflow-x: hidden">
+
+        <div *ngFor="let slot of filterSlots">
+            <div class="col-sm-12 main" *ngIf="!slot.isExpired">
+
+                <div class="card product_item cell " (click)="singleSelect(slot)"
+                    [ngStyle]="{'background-color': slot.isSelected ? '#8C52FF' : '#46494f' }" id='{{slot.id}}'>
+                    <div class="body">
+                        <div class="cp_img">
+                            <div class="hover">
+                                <div style="display: flex">
+                                    <div style="width: 49%; margin-top: 2%;">
+                                        <p class="btn  btn-sm waves-effect time" style="margin: 0;">{{ slot.startDate |
+                                            date }}
+                                            day#{{(slot.day)}} </p>
+                                        <p class="snd" style="text-align:center; margin-bottom: 0px;">{{slot.name}}
+                                            GRISE </p>
+                                        <a class="btn  btn-sm waves-effect time" style="margin: 8px;margin-top: 0">
+                                            <i class="fa fa-clock"></i>
+                                            closing in {{ slot.timeLeft }}
+                                        </a>
+                                    </div>
+                                    <div class="vertical-divider">
+                                        <div class="center-element">{{slot.id}}</div>
+                                    </div>
+                                    <div style="width: 49%; display: flex;margin-top: 2%;">
+                                        <div class="section" style="margin-left: 20%;">
+                                            <i class="fa fa-user" [style.color]="slot.color" aria-hidden="true"
+                                                style="font-size:40px"></i>
+                                            <h4>{{slot.slotLeft}}</h4>
+                                            <h4>Slots Left</h4>
+                                        </div>
+                                        <div class="section" style="margin-right: 5%;">
+                                            <i class="fab fa-ethereum" [style.color]="slot.color"
+                                                style="font-size: 40px"></i><br>
+                                            <h4>{{slot.totalInvest | number:'1.0-5'}}</h4>
+                                            <h4>Total Ether</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="reserveClick()">
+        <div style="float: left;margin-top: 12px;">
+            <!-- <button mat-button class="button" style="margin-bottom: 0">MiniMum amount 0.5 ETH</button> -->
+            <span style="display: flex !important;">
+                <input type="number" class="form-control" [placeholder]="valuePlaceHolder" required name="amountInput" id="amountInput"
+                    [(ngModel)]="amount" #amountInput="ngModel"
+                    style="border-radius: 0; height: 36px;border: none;border-radius: 5px 0 0 5px; width: 60%;">
+                <button class="dropdown_button"
+                    style="border-radius: 0;height: 36px;border-radius: 0 5px 5px 0 ;background-color: #f0ebeb !important"
+                    mat-button data-toggle="dropdown" value="{{selectedCoin}}">{{selectedCoin}}</button>
+                <ul class="dropdown-menu">
+                    <li *ngFor="let othercoin of allOtherCoins">
+                        <a (click)="getSelectedCoin(othercoin)">{{ othercoin.name }}</a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+        <button type="submit" class="btn btn-primary button" [disabled]="checkValueWithBalance()"
+            style="float: right;margin-bottom:0;height: 38px;width: 249px">{{ insufficientBalanceText ? insufficientBalanceText : 'Reserve' }}</button>
+    </form>
+</div>

@@ -1,0 +1,387 @@
+*,
+*:focus,
+*:hover {
+  outline: none;
+}
+
+.btn:focus {
+  outline: none !important;
+}
+
+.truncate {
+  width: 110%;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+.opennav {
+  top: 70%;
+  position: relative;
+  font-size: 30px;
+  cursor: pointer;
+  color: #f1f1f1
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  padding-bottom: 11px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 18px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: #6610f2;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+
+.w3-black {
+  background: linear-gradient(89.02deg, #6226D9 0.89%, #8C52FF 100%) !important;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.sidenav {
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .sidenav {
+    display: flex;
+    height: auto;
+    padding: 15px;
+
+    p {
+      margin: 0 7px 10px;
+    }
+  }
+
+  .row.content {
+    height: auto;
+  }
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  background-color: #2D333A;
+  overflow: auto;
+  // width: 100px;
+}
+
+.sidebar a {
+  text-align: center;
+  display: block;
+  color: #2d333a;
+  padding: 16px;
+  text-decoration: none;
+  // width: 
+}
+
+.sidebar a.active {
+  background-color: #6610f2;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar a {
+    float: left;
+  }
+
+  div.content {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.app-item-text {
+  color: #f1f1f1;
+}
+
+@media(min-width:992px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media (max-width:992px) {
+  .mobile-nav {
+    display: block;
+  }
+
+  .sidenav {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(59, 65, 72);
+    overflow-x: hidden;
+    padding-top: 60px;
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    text-align: center;
+    display: inline-grid;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+}
+
+.button {
+  background: linear-gradient(89.02deg, #6226D9 0.89%, #8C52FF 100%) !important;
+  border-radius: 50px;
+  margin: 10px;
+
+}
+
+.router_outlet {
+  width: 90%;
+
+  @media (max-width:768px) {
+    width: 100%;
+  }
+}
+
+.Connect-wallet {
+  // margin-left: 100px;
+  // width: 40%;
+  top: 25%;
+  position: relative;
+  height: 46%;
+  font-size: 20px;
+  color: white;
+  background-color: #f4772e !important;
+
+}
+
+.accNO {
+  background-image: linear-gradient(135deg, #667eea, #764ba2) !important;
+  position: absolute;
+  display: flex;
+  width: 235px;
+  align-items: center;
+  // width: 40%;
+}
+
+.without-accno {
+  width: 100%;
+  border-radius: 18px;
+  padding: 0px 35px;
+}
+
+.header .logout {
+  font-size: 26px;
+  color: black;
+}
+
+.header a:hover,
+.header .logout:hover {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.stroke-width {
+  // width: 7%;
+  float: left;
+}
+
+.stroke2-width {
+  // width: 93%;
+  float: left;
+  padding: 0px;
+
+  @media (max-width:768px) {
+    width: 100%;
+  }
+}
+
+@media(max-width:715px) {
+  .container-fluid {
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+.desktop {
+  height: 100%;
+  display: flex;
+  background-color: #2d333a;
+}
+
+.home-side {
+  background-color: #2d333a;
+  overflow-y: scroll;
+  height: inherit;
+  position: fixed;
+  z-index: 99;
+  padding-top: 107px;
+}
+
+.router-outlet {
+  padding-top: 107px;
+  padding-left: 53px;
+  height: 100vh;
+}
+
+@media (max-width:1300px) and (min-width:992px) {}
+
+@media(max-width:992px) {
+  .router-outlet {
+    padding-left: 0px;
+  }
+
+  .Connect-wallet {
+    display: none;
+  }
+
+  .Connect-wallet-mobile {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 20px 0px;
+  }
+
+  .closebtn {
+    margin: 20px 10px 10px 10px;
+  }
+}
+
+#mySidenav {
+  overflow-y: scroll;
+  display: inline-grid;
+  height: -webkit-fill-available;
+
+  a {
+    width: 100%;
+    text-align: -webkit-center;
+  }
+}
+
+::ng-deep .mat-menu-content {
+  background-image: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white;
+  width: 100%;
+}
+
+.top_button {
+  background-color: Transparent;
+  border: none;
+  width: -webkit-fill-available;
+  margin: 10px;
+  padding-top: 10px;
+  text-align: left;
+}
+
+mat-button:hover {
+  background-color: none;
+  color: white;
+}
+
+::ng-deep.mat-menu-panel {
+  min-width: 120% !important;
+  margin-top: 10px !important;
+}
