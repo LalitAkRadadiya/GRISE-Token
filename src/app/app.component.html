@@ -202,7 +202,7 @@
   <div class="col-sm-5" style="display: flex; justify-content: flex-end;">
 
     <!-- <button  >Connect to Wallet</button> -->
-    <div style="width: 50%;" *ngIf="isLogin">
+    <div style="margin-right: 250px;" *ngIf="isLogin">
 
       <div mat-button [matMenuTriggerFor]="menu" class="w3-button w3-round-xlarge Connect-wallet accNO">
         <a class="hello" mat-button style="padding-left: 0;" (click)="refetchBalance()">
@@ -248,7 +248,7 @@
       </mat-menu>
 
     </div>
-    <div style="margin-right: 20%;" *ngIf="!isLogin">      
+    <div  *ngIf="!isLogin">      
         <button mat-button (click)="connectToWallet()"
           class="w3-button w3-round-xlarge Connect-wallet without-accno ">Connect to Wallet</button>      
     </div>
