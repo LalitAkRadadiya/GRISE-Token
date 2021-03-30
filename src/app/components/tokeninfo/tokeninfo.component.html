@@ -6,23 +6,37 @@
 
         <div class="col-lg-3 tokeninfo-first">
             <div style="display: grid;">
+                <div class="">
+                    <button type="button" class="btn btn-primary tab-button all_button" routerLink="../home"
+                        queryParamsHandling="merge" style="margin-top: 25%"> Home </button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary tab-button all_button" fragment="Overview"
+                        (click)="navigateToSection('Overview')">Overview</button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary tab-button all_button" fragment="Inflation"
+                        (click)="navigateToSection('Inflation')">Inflation</button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary tab-button all_button" fragment="use_defi"
+                        (click)="navigateToSection('use_defi')">Use Defi Tokens </button>
 
-                <button type="button" class="btn btn-primary tab-button all_button" routerLink="../home"
-                    queryParamsHandling="merge" style="margin-top: 25%"> Home </button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary tab-button all_button" fragment="smart"
+                        (click)="navigateToSection('smart')">Smart Contract</button>
+                </div>
 
-                <button type="button" class="btn btn-primary tab-button all_button" fragment="Overview"
-                    (click)="navigateToSection('Overview')">Overview</button>
-                <button type="button" class="btn btn-primary tab-button all_button" fragment="Inflation"
-                    (click)="navigateToSection('Inflation')">Inflation</button>
-                <button type="button" class="btn btn-primary tab-button all_button" fragment="use_defi"
-                    (click)="navigateToSection('use_defi')">Use Defi Tokens </button>
 
-                <button type="button" class="btn btn-primary tab-button all_button" fragment="smart"
-                    (click)="navigateToSection('smart')">Smart Contract</button>
-                <button type="button" class="btn btn-primary tab-button all_button" fragment="fee_structure"
-                    (click)="navigateToSection('fee_structure')">Fee Structure</button>
-                <button type="button" class="btn btn-primary tab-button all_button" fragment="team"
-                    (click)="navigateToSection('team')">Team</button>
+                <div>
+                    <button type="button" class="btn btn-primary tab-button all_button" fragment="fee_structure"
+                        (click)="navigateToSection('fee_structure')">Fee Structure</button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary tab-button all_button" fragment="team"
+                        (click)="navigateToSection('team')">Team</button>
+                </div>
             </div>
 
 
@@ -381,10 +395,10 @@
             <div class="footer">
                 <div class="grise">
                     <!-- <img style="width: 250px" src="../../../assets/logo.png"> -->
-                  <span>
-                    Copyright © 2021–2022 — Grise, LLC<br>
-                    ALL RIGHTS RESERVED
-                  </span>
+                    <span>
+                        Copyright © 2021–2022 — Grise, LLC<br>
+                        ALL RIGHTS RESERVED
+                    </span>
                 </div>
             </div>
 
