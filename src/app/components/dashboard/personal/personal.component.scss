@@ -176,5 +176,8 @@ label {
   padding-left: 16px;
 }
 .trancate{
+  @media (max-width:769px){
+    width: 50px;
   word-break: break-word;
+  }
 }
