@@ -29,7 +29,7 @@
             <!-- <img style="width: 250px" src="../../../assets/logo.png"> -->
             <!-- <i class="fas fa-coins personal_icon"></i> -->
             <h1 class="personal_title">Grise Token Reservation</h1>
-          </div>
+        </div>
 
         <div style="padding-top: 80px;">
             <div *ngFor="let slot of filterSlots">
@@ -37,7 +37,7 @@
                     <div class="card product_item cell">
                         <div class="body">
                             <div class="cp_img">
-    
+
                                 <p class="btn  btn-sm waves-effect time truncate" style="margin: 0;">{{ slot.startDate |
                                     date }} day#{{slot.day}}</p>
                                 <a class="btn  btn-sm waves-effect time truncate" style="margin: 0;">{{slot.hours}}-hour
@@ -48,86 +48,82 @@
                                         <div class="section">
                                             <i class="fa fa-user" [style.color]="slot.color" aria-hidden="true"
                                                 style="font-size:40px"></i>
-    
+
                                             <h4>{{slot.slotLeft}}</h4>
                                             <h4>Slots Left</h4>
-    
+
                                         </div>
                                         <div class="line"></div>
                                         <!-- <div class="vl"></div> -->
                                         <div class="section">
                                             <i class="fab fa-ethereum" [style.color]="slot.color"
                                                 style="font-size: 40px"></i><br>
-    
+
                                             <h4>{{slot.totalInvest | number:'1.0-5'}}</h4>
                                             <h4>Total Ether</h4>
-    
+
                                         </div>
                                     </div>
-    
+
                                     <form #f="ngForm" (ngSubmit)="reserveClick(slot, f)">
-                                        <div style="display: flex; padding-left:8px; padding-right: 8px;padding-top: 20px">
-    
+                                        <div
+                                            style="display: flex; padding-left:8px; padding-right: 8px;padding-top: 20px">
+
                                             <input type="number" class="form-control"
-                                                style="    border-radius: 6px;background-color: #e7e7e7;" id="slotAmount"
-                                                name="slotAmount" placeholder="Enter Ether (Min: 0.1 Eth)" min="1" required
+                                                style="    border-radius: 6px;background-color: #e7e7e7;"
+                                                id="slotAmount" name="slotAmount"
+                                                placeholder="Enter Ether (Min: 0.1 Eth)" min="1" required
                                                 [disabled]="slot.isExpired" ngModel #slotAmount="ngModel">
-    
+
                                         </div>
-    
+
                                         <button type="submit" class="btn btn-primary reservation-button"
                                             [disabled]="checkValueWithBalance(slot, f)"
                                             [style.background-color]="slot.color">{{ slot.validationText ?
                                             slot.validationText : 'Reserve Grise' }}</button>
-    
+
                                     </form>
                                     <!-- <br> -->
-    
-                                    <button type="submit" class="btn btn-primary reservation-button"
-                                    data-toggle="modal"  [style.background-color]="slot.color"
-                                        data-target="#exampleModal">NFT</button>
+
+                                    <button type="submit" class="btn btn-primary reservation-button" data-toggle="modal"
+                                        [style.background-color]="slot.color" data-target="#exampleModal">NFT</button>
 
 
                                     <!-- <button style="background-color: transparent;border: none;" data-toggle="modal"
                                         data-target="#exampleModal">
                                         <img style="width: 10%;border-radius: 50%;" src="../../../assets/NFT_Icon.png">
                                     </button> -->
-    
-    
-                                    <div style="color: black;" class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog"  role="document">
+
+
+                                    <div style="color: black;" class="modal fade" id="exampleModal" tabindex="-1"
+                                        role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
                                             <div class="modal-content">
-                                                <div class="modal-header" style="background-color: #002d80;color: white;">
-                                                    <h5 class="modal-title" style="margin: 0;" id="exampleModalLabel">{{slot.name}} GRISE</h5>
-    
+                                                <div class="modal-header"
+                                                    style="background-color: #002d80;color: white;">
+                                                    <h5 class="modal-title" style="margin: 0;font-size: 27px;" id="exampleModalLabel">
+                                                        NFT</h5>
+
                                                 </div>
                                                 <div class="modal-body" style="text-align: left;">
                                                     <div style="display: flex;">
-                                                        <div style="text-align: center;">
-                                                            <img style="width: 60%; "
-                                                                src="../../../assets/grise_colour_logo.jpg">
+                                                        <div class="model_img_box">
+                                                            <img class="model_img" src="../../../assets/NFT1.jpg">
                                                         </div>
                                                         <div>
                                                             <div class="description">
-    <p>
-          This applies if someone uses a referral link and buys 20 Ethereum from same referral link (incrementally or in one transaction) there bonus goes up to 10 percent and so does yours.   Referral bonus ends with reservation event
-    </p>
-                                                                <!-- <p><b>Registration Number : </b> 23 </p>
-                                                                <p><b>Owner : </b>
-                                                                    0x599EeE55a1Dec2e6fa60eED0499d0b5E18bddeb0 </p>
-                                                                <p><b>Address : </b> satellite road, surat </p>
-                                                                <p><b>Area : </b> 140 square yard </p>
-                                                                <p><b>Year : </b> 2020 </p>
-                                                                <p><b>Number of floors : </b> 1 </p>
-                                                                <p><b>Number of rooms : </b> 4 </p>
-                                                                <p><b>Price : </b> 0.5 ETH </p> -->
+                                                                <p class="text_paragraph">
+                                                                    2 Mythic NFT'S will be given away,
+                                                                    Among which 1 will be given to the
+                                                                    highest contributor and 1 will be give
+                                                                    away to a random address. </p>
+
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer" style="padding:0; margin:0">
-                                                    <button type="button" class="btn btn-danger"
+                                                    <button type="button" class="model_btn btn btn-danger"
                                                         data-dismiss="modal">Close</button>
                                                 </div>
                                             </div>
@@ -137,17 +133,18 @@
                                         style="margin: 8px;margin-bottom: -20px;">
                                         <i class="fa fa-clock"></i>
                                         {{ (slot.isExpired ? '' : 'closing in ') + slot.timeLeft }}
-    
+
                                     </a>
                                     <!-- <h4>26  </h4>  -->
                                     <div class="bar-pro"></div>
                                     <a class="progress">
-                                        <a class="progress-bar" role="progressbar" [attr.aria-valuenow]="slot.progressDone"
-                                            aria-valuemin="0" aria-valuemax="100" [style.width.%]="slot.progressDone"
+                                        <a class="progress-bar" role="progressbar"
+                                            [attr.aria-valuenow]="slot.progressDone" aria-valuemin="0"
+                                            aria-valuemax="100" [style.width.%]="slot.progressDone"
                                             [style.background-color]="slot.color"></a>
                                     </a>
-    
-    
+
+
                                     <div class="price" style="display: flex">
                                         <div style="width: 50%">
                                             <span class="old_price">Your Share</span><br>
@@ -158,16 +155,16 @@
                                             <span class="new_price">{{slot.myContribution | number:'1.0-5'}} ETH</span>
                                         </div>
                                     </div>
-    
+
                                 </div>
                             </div>
-    
+
                         </div>
                     </div>
                 </div>
-    
+
             </div>
-    
+
         </div>
 
     </div>
