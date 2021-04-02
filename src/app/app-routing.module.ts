@@ -19,7 +19,6 @@ import { TokenstatsComponent } from './components/tokenstats/tokenstats.componen
 import { ConfirmDialogComponent } from './helper/confirm-dialog/confirm-dialog.component';
 import { SpinnerComponent } from './helper/spinner/spinner.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
-
 import { NFTComponent } from './components/nft/nft.component';
 import { TokenMetrixComponent } from './components/token-metrix/token-metrix.component';
 const material = [MatTabsModule, ClipboardModule, MatTooltipModule];

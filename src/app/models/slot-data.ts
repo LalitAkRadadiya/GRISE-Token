@@ -22,4 +22,5 @@ export class SlotData {
     isSelected: boolean;
     isExpired: boolean;
     validationText?: string;
+    nftDetail? : string;
 }

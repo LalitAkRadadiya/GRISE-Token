@@ -86,7 +86,7 @@
                                     <!-- <br> -->
 
                                     <button type="submit" class="btn btn-primary reservation-button" data-toggle="modal"
-                                        [style.background-color]="slot.color" data-target="#exampleModal">NFT</button>
+                                        [style.background-color]="slot.color" (click)="nftButton(slot.id)" data-target="#exampleModal">NFT</button>
 
 
                                     <!-- <button style="background-color: transparent;border: none;" data-toggle="modal"
@@ -95,9 +95,9 @@
                                     </button> -->
 
 
-                                    <div style="color: black;" class="modal fade" id="exampleModal" tabindex="-1"
+                                    <div style="color: black;" class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
                                         role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
+                                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header"
                                                     style="background-color: #002d80;color: white;">
@@ -113,18 +113,16 @@
                                                         <div>
                                                             <div class="description">
                                                                 <p class="text_paragraph">
-                                                                    2 Mythic NFT'S will be given away,
-                                                                    Among which 1 will be given to the
-                                                                    highest contributor and 1 will be give
-                                                                    away to a random address. </p>
+                                                                    {{nftdetail}}
+                                                                </p>
 
                                                             </div>
-                                                        </div>
+                                                        </div> 
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer" style="padding:0; margin:0">
                                                     <button type="button" class="model_btn btn btn-danger"
-                                                        data-dismiss="modal">Close</button>
+                                                        data-dismiss="modal" (click)="nftCloseButton()">Close</button>
                                                 </div>
                                             </div>
                                         </div>

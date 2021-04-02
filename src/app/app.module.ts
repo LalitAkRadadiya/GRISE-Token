@@ -21,7 +21,7 @@ import { AccountNoPipe } from './pipes/account-no.pipe';
   declarations: [
     AppComponent,
     AccountNoPipe,
-    routingmod,
+    routingmod
   ],
   imports: [
     FormsModule,

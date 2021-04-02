@@ -16,7 +16,15 @@ export class ReservationComponent implements OnInit, OnDestroy {
   filterType = 0;
   filterSlots: SlotData[];
   minValueRequired = 0.1;
-
+  nftdetail : any;
+  nftDetailEnable = false;
+  nftButton(val : any){
+    console.log('val', val);
+    this.nftdetail = this.sharedService.allSlots[val-1].nftDetail;
+  }
+  nftCloseButton(){
+    this.nftDetailEnable = false;
+  }
   constructor(private sharedService: SharedService,
               private liquidityContractService: LiquidityContractService,
               private localDataUpdateService: LocalDataUpdateService,
